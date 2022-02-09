@@ -1,6 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 import { Navbar, Nav, Container, Carousel } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen, faCode, faIdCardClip } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [aboutMe, setAboutMe] = useState();
@@ -60,7 +62,10 @@ function App() {
       </Carousel>
 
       <div className='container about_me'>
-        <h1>ABOUT ME</h1>
+        <h1>
+          <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip' />
+          ABOUT ME
+        </h1>
         <div className='row'>
           <div className='col-md-4'>
             <h5>이름</h5>
@@ -90,7 +95,10 @@ function App() {
       </div>
 
       <div className='skills'>
-        <h1>SKILLS</h1>
+        <h1>
+          <FontAwesomeIcon icon={faCode} className='faCode' />
+          SKILLS
+        </h1>
         <div className='row'>
           <div className='col'>
             <p>HTML</p>
@@ -100,6 +108,14 @@ function App() {
             <p>Redux</p>
           </div>
         </div>
+      </div>
+
+      <div className='portfolio'>
+        <h1>
+          <FontAwesomeIcon icon={faPen} className='faPen' />
+          PORTFOLIO
+        </h1>
+        <div className='portfolio_01'></div>
       </div>
     </div>
   );
