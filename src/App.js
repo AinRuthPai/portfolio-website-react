@@ -11,7 +11,7 @@ function App() {
     <div className='App'>
       <Navbar bg='light' variant='light'>
         <Container>
-          <Navbar.Brand href='#home'>Navbar</Navbar.Brand>
+          <Navbar.Brand href='#home'>PORTFOLIO SITE</Navbar.Brand>
           <Nav className='me-auto'>
             <Nav.Link href='#home'>Home</Nav.Link>
             <Nav.Link href='#features'>Features</Nav.Link>
@@ -115,7 +115,10 @@ function App() {
           <FontAwesomeIcon icon={faPen} className='faPen' />
           PORTFOLIO
         </h1>
-        <div className='portfolio_01'></div>
+        <div>
+          <div className='portfolio_01'>test1</div>
+          <div className='portfolio_02'>test2</div>
+        </div>
       </div>
     </div>
   );
