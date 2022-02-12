@@ -3,9 +3,10 @@ import { useState } from "react";
 import { Navbar, Nav, Container, Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCode, faIdCardClip } from "@fortawesome/free-solid-svg-icons";
+import { faHtml5, faCss3, faJs, faReact } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
-  const [aboutMe, setAboutMe] = useState();
+  const aboutMeTitle = ["이름", "생년월일", "주소", "연락처", "이메일", "학력"];
 
   return (
     <div className='App'>
@@ -68,27 +69,27 @@ function App() {
         </h1>
         <div className='row'>
           <div className='col-md-4'>
-            <h5>이름</h5>
+            <h5>{aboutMeTitle[0]}</h5>
             <p>백훈찬</p>
           </div>
           <div className='col-md-4'>
-            <h5>생년월일</h5>
+            <h5>{aboutMeTitle[1]}</h5>
             <p>93.02.03</p>
           </div>
           <div className='col-md-4'>
-            <h5>주소</h5>
+            <h5>{aboutMeTitle[2]}</h5>
             <p>서울시 구로구</p>
           </div>
           <div className='col-md-4'>
-            <h5>연락처</h5>
+            <h5>{aboutMeTitle[3]}</h5>
             <p>010-9159-0579</p>
           </div>
           <div className='col-md-4'>
-            <h5>이메일</h5>
+            <h5>{aboutMeTitle[4]}</h5>
             <p>tanbing@naver.com</p>
           </div>
           <div className='col-md-4'>
-            <h5>학력</h5>
+            <h5>{aboutMeTitle[5]}</h5>
             <p>수원과학대 컴퓨터정보과</p>
           </div>
         </div>
@@ -101,11 +102,26 @@ function App() {
         </h1>
         <div className='row'>
           <div className='col'>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <p>React</p>
-            <p>Redux</p>
+            <p>
+              <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5' />
+              HTML
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faCss3} size='2x' className='faCss3' />
+              CSS
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faJs} size='2x' className='faJs' />
+              JavaScript
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faReact} size='2x' className='faReact' />
+              React
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5' />
+              Redux
+            </p>
           </div>
         </div>
       </div>
@@ -115,9 +131,21 @@ function App() {
           <FontAwesomeIcon icon={faPen} className='faPen' />
           PORTFOLIO
         </h1>
-        <div>
-          <div className='portfolio_01'>test1</div>
-          <div className='portfolio_02'>test2</div>
+
+        <div className='portfolio_01'>
+          <img src='https://ifh.cc/g/YATHEp.jpg' />
+          <span>
+            test1
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </span>
+        </div>
+
+        <div className='portfolio_02'>
+          <img src='https://ifh.cc/g/YATHEp.jpg' />
+          <span>
+            test2
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </span>
         </div>
       </div>
     </div>
