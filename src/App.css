@@ -23,17 +23,37 @@
   padding: var(--container-padding);
 }
 
+.skills_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+
 .skills h1 {
   margin-bottom: 40px;
 }
 
 .skills p {
   transition: transform 100ms ease-in;
+  padding-top: 8px;
+  margin-right: 50px;
 }
 
 .skills p:hover {
   transform: scale(1.1);
-  cursor: pointer;
+}
+
+.archiving {
+  width: 30vw;
+  height: 50vh;
+  background-color: white;
+  border-radius: 20px;
+  transition: transform 100ms ease-in;
+}
+
+.archiving:hover {
+  transform: scale(1.02);
 }
 
 .portfolio {
@@ -73,8 +93,8 @@
 
 .portfolio img {
   height: 400px;
-  width: 600px;
-  object-fit: cover;
+  width: 500px;
+  object-fit: contain;
 }
 
 .portfolio p {
