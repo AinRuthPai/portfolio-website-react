@@ -1,11 +1,9 @@
 import "./App.css";
-import { useState } from "react";
 import { Switch, Link, Route } from "react-router-dom";
-import { Navbar, Nav, Container, Carousel, Stack } from "react-bootstrap";
+import { Navbar, Nav, Container, Carousel, ListGroup, Badge, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCode, faIdCardClip } from "@fortawesome/free-solid-svg-icons";
-import { faHtml5, faCss3, faJs, faReact } from "@fortawesome/free-brands-svg-icons";
-// import Board from "./components/Board";
+import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   const aboutMeTitle = ["이름", "생년월일", "주소", "연락처", "이메일", "학력"];
@@ -18,10 +16,7 @@ function App() {
           <Navbar.Brand href='/'>PORTFOLIO SITE</Navbar.Brand>
           <Nav className='me-auto'>
             <Nav.Link href='/'>Home</Nav.Link>
-            <Nav.Link>
-              <Link to='/board'>게시판</Link>
-            </Nav.Link>
-            <Nav.Link href='/board'>board</Nav.Link>
+            <Nav.Link href='/board'>Board</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -109,7 +104,7 @@ function App() {
               SKILLS & ARCHIVING
             </h1>
             <div className='skills_container'>
-              <div>
+              <div className='skills_text'>
                 <p>
                   <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5' />
                   HTML
@@ -132,10 +127,12 @@ function App() {
                 </p>
               </div>
               <div className='archiving'>
-                <div>
-                  <span>Test</span>
-                  <span>Nulla vitae elit libero, a pharetra augue mollis interdum.</span>
+                <div className='archiving_title'>
+                  <FontAwesomeIcon icon={faGithub} size='2x' className='faGithub' />
+                  <h3>Github</h3>
                 </div>
+                <span>지금까지 만들어 온 코드 저장소입니다.</span>
+                <a href='https://github.com/AinRuthPai'>https://github.com/AinRuthPai</a>
               </div>
             </div>
           </div>
@@ -168,6 +165,10 @@ function App() {
             </div>
           </div>
         </Route>
+
+        <Route path='/board'>
+          <Board />
+        </Route>
       </Switch>
     </div>
   );
@@ -175,11 +176,42 @@ function App() {
 
 function Board() {
   return (
-    <Route path='/board'>
-      <div className='board_page'>
-        <h1>kldsjfa;sdn;lkdnfv;lkdfnbl;k</h1>
+    <>
+      <div className='board'>
+        <ListGroup as='ol' numbered>
+          <ListGroup.Item as='li' className='d-flex justify-content-between align-items-start'>
+            <div className='ms-2 me-auto'>
+              <div className='fw-bold'>Subheading</div>
+              Cras justo odio
+            </div>
+            <Badge variant='primary' pill>
+              14
+            </Badge>
+          </ListGroup.Item>
+          <ListGroup.Item as='li' className='d-flex justify-content-between align-items-start'>
+            <div className='ms-2 me-auto'>
+              <div className='fw-bold'>Subheading</div>
+              Cras justo odio
+            </div>
+            <Badge variant='primary' pill>
+              14
+            </Badge>
+          </ListGroup.Item>
+          <ListGroup.Item as='li' className='d-flex justify-content-between align-items-start'>
+            <div className='ms-2 me-auto'>
+              <div className='fw-bold'>Subheading</div>
+              Cras justo odio
+            </div>
+            <Badge variant='primary' pill>
+              14
+            </Badge>
+          </ListGroup.Item>
+        </ListGroup>
+        <Button variant='primary' className='boardWriteBtn'>
+          글쓰기
+        </Button>{" "}
       </div>
-    </Route>
+    </>
   );
 }
 

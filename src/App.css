@@ -11,7 +11,7 @@
 }
 
 .about_me h1 {
-  margin-bottom: 30px;
+  padding: var(--container-padding);
 }
 
 .col-md-4 {
@@ -24,13 +24,13 @@
 }
 
 .skills_container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-.skills h1 {
+.skills_text {
   margin-bottom: 40px;
 }
 
@@ -50,6 +50,19 @@
   background-color: white;
   border-radius: 20px;
   transition: transform 100ms ease-in;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.archiving_title {
+  padding-bottom: 30px;
+}
+
+.archiving a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
 }
 
 .archiving:hover {
@@ -99,4 +112,16 @@
 
 .portfolio p {
   padding-top: 30px;
+}
+
+.board {
+  display: inline-block;
+  justify-content: center;
+  width: 70vw;
+  height: auto;
+  margin: 30px 0px;
+}
+
+.boardWriteBtn {
+  margin-top: 50px;
 }
