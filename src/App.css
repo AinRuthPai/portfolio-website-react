@@ -2,12 +2,13 @@
   --container-padding: 30px 0px;
 }
 
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .about_me {
   padding: var(--container-padding);
+  text-align: center;
 }
 
 .about_me h1 {
@@ -32,16 +33,17 @@
 
 .skills_text {
   margin-bottom: 40px;
+  cursor: default;
 }
 
 .skills p {
-  transition: transform 100ms ease-in;
+  transition: transform 200ms ease-in;
   padding-top: 8px;
   margin-right: 50px;
 }
 
 .skills p:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .archiving {
@@ -49,7 +51,7 @@
   height: 50vh;
   background-color: white;
   border-radius: 20px;
-  transition: transform 100ms ease-in;
+  transition: transform 200ms ease-in;
   display: flex;
   flex-direction: column;
   padding-top: 30px;
@@ -66,7 +68,7 @@
 }
 
 .archiving:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .portfolio {
@@ -96,12 +98,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transition: transform 100ms ease-in;
+  transition: transform 200ms ease-in;
 }
 
 .portfolio_01:hover,
 .portfolio_02:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .portfolio img {
@@ -113,15 +115,9 @@
 .portfolio p {
   padding-top: 30px;
 }
-
 .board {
-  display: inline-block;
-  justify-content: center;
-  width: 70vw;
-  height: auto;
-  margin: 30px 0px;
+  display: flex;
 }
-
 .boardWriteBtn {
   margin-top: 50px;
 }

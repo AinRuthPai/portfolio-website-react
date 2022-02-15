@@ -4,9 +4,11 @@ import { Navbar, Nav, Container, Carousel, ListGroup, Badge, Button } from "reac
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCode, faIdCardClip } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 function App() {
   const aboutMeTitle = ["이름", "생년월일", "주소", "연락처", "이메일", "학력"];
+  const [postTitle, setPostTitle] = useState(["html", "css", "js"]);
 
   return (
     <div className='App'>
@@ -72,23 +74,23 @@ function App() {
             <div className='row'>
               <div className='col-md-4'>
                 <h5>{aboutMeTitle[0]}</h5>
-                <p>백훈찬</p>
+                <p></p>
               </div>
               <div className='col-md-4'>
                 <h5>{aboutMeTitle[1]}</h5>
-                <p>93.02.03</p>
+                <p>.02.03</p>
               </div>
               <div className='col-md-4'>
                 <h5>{aboutMeTitle[2]}</h5>
-                <p>서울시 구로구</p>
+                <p>서울시</p>
               </div>
               <div className='col-md-4'>
                 <h5>{aboutMeTitle[3]}</h5>
-                <p>010-9159-0579</p>
+                <p>010</p>
               </div>
               <div className='col-md-4'>
                 <h5>{aboutMeTitle[4]}</h5>
-                <p>tanbing@naver.com</p>
+                <p>@naver.com</p>
               </div>
               <div className='col-md-4'>
                 <h5>{aboutMeTitle[5]}</h5>
@@ -167,50 +169,40 @@ function App() {
         </Route>
 
         <Route path='/board'>
-          <Board />
+          <Board postTitle={postTitle} />
         </Route>
       </Switch>
     </div>
   );
 }
 
-function Board() {
+function Board(props) {
+  const postTitle = props.postTitle;
+
   return (
     <>
-      <div className='board'>
-        <ListGroup as='ol' numbered>
-          <ListGroup.Item as='li' className='d-flex justify-content-between align-items-start'>
-            <div className='ms-2 me-auto'>
-              <div className='fw-bold'>Subheading</div>
-              Cras justo odio
-            </div>
-            <Badge variant='primary' pill>
-              14
-            </Badge>
-          </ListGroup.Item>
-          <ListGroup.Item as='li' className='d-flex justify-content-between align-items-start'>
-            <div className='ms-2 me-auto'>
-              <div className='fw-bold'>Subheading</div>
-              Cras justo odio
-            </div>
-            <Badge variant='primary' pill>
-              14
-            </Badge>
-          </ListGroup.Item>
-          <ListGroup.Item as='li' className='d-flex justify-content-between align-items-start'>
-            <div className='ms-2 me-auto'>
-              <div className='fw-bold'>Subheading</div>
-              Cras justo odio
-            </div>
-            <Badge variant='primary' pill>
-              14
-            </Badge>
-          </ListGroup.Item>
-        </ListGroup>
-        <Button variant='primary' className='boardWriteBtn'>
-          글쓰기
-        </Button>{" "}
-      </div>
+      {postTitle.map((post, i) => {
+        return (
+          <div className='board'>
+            <ListGroup as='ul'>
+              <ListGroup.Item as='li' className='d-flex justify-content-between align-items-start'>
+                <div className='ms-2 me-auto'>
+                  <div className='fw-bold' key={i}>
+                    {post}
+                  </div>
+                  Cras justo odioooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+                </div>
+                <Badge variant='primary' pill>
+                  14
+                </Badge>
+              </ListGroup.Item>
+            </ListGroup>
+          </div>
+        );
+      })}
+      <Button variant='primary' className='boardWriteBtn'>
+        글쓰기
+      </Button>{" "}
     </>
   );
 }
