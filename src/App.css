@@ -2,9 +2,9 @@
   --container-padding: 30px 0px;
 }
 
-/* .App {
+.App {
   text-align: center;
-} */
+}
 
 .about_me {
   padding: var(--container-padding);
