@@ -1,4 +1,88 @@
-:root {
+.App {
+  text-align: center;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.container {
+  padding: 8px 0px;
+}
+
+.section {
+  padding: 40px 0px;
+}
+
+.section h1 {
+  padding-bottom: 40px;
+}
+
+.skills {
+  background-color: yellow;
+}
+
+.skills_archiving {
+  display: flex;
+  justify-content: center;
+}
+
+.skills_container {
+  margin-right: 40px;
+  font-size: 20px;
+}
+
+.archiving_container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  padding: 26px;
+  margin-left: 40px;
+  transition: transform 100ms ease-out;
+}
+
+.archiving_container:hover {
+  transform: scale(1.05);
+}
+
+.archiving_container span {
+  padding: 20px 0px;
+}
+
+.portfolio {
+  background-color: black;
+}
+
+.portfolio h1 {
+  color: white;
+}
+
+.portfolio_container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: auto;
+}
+
+.portfolio_01,
+.portfolio_02 {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  height: 70vh;
+}
+
+.portfolio img {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+/* :root {
   --container-padding: 30px 0px;
 }
 
@@ -120,4 +204,4 @@
 }
 .boardWriteBtn {
   margin-top: 50px;
-}
+} */ ;

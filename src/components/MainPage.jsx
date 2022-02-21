@@ -50,9 +50,9 @@ function MainPage() {
       </Carousel>
 
       {/* About me */}
-      <div className='container about_me'>
+      <div className='section about_me'>
         <h1>
-          <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip' />
+          <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip icon' />
           ABOUT ME
         </h1>
         <div className='row'>
@@ -84,36 +84,36 @@ function MainPage() {
       </div>
 
       {/* Skills */}
-      <div className='skills'>
+      <div className='section skills'>
         <h1>
-          <FontAwesomeIcon icon={faCode} className='faCode' />
+          <FontAwesomeIcon icon={faCode} className='faCode icon' />
           SKILLS & ARCHIVING
         </h1>
-        <div className='skills_container'>
-          <div className='skills_text'>
+        <div className='skills_archiving'>
+          <div className='skills_container'>
             <p>
-              <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5' />
+              <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5 icon' />
               HTML
             </p>
             <p>
-              <FontAwesomeIcon icon={faCss3} size='2x' className='faCss3' />
+              <FontAwesomeIcon icon={faCss3} size='2x' className='faCss3 icon' />
               CSS
             </p>
             <p>
-              <FontAwesomeIcon icon={faJs} size='2x' className='faJs' />
+              <FontAwesomeIcon icon={faJs} size='2x' className='faJs icon' />
               JavaScript
             </p>
             <p>
-              <FontAwesomeIcon icon={faReact} size='2x' className='faReact' />
+              <FontAwesomeIcon icon={faReact} size='2x' className='faReact icon' />
               React
             </p>
             <p>
-              <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5' />
+              <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5 icon' />
               Redux
             </p>
           </div>
-          <div className='archiving'>
-            <div className='archiving_title'>
+          <div className='archiving_container'>
+            <div className='archiving_text'>
               <FontAwesomeIcon icon={faGithub} size='2x' className='faGithub' />
               <h3>Github</h3>
             </div>
@@ -124,29 +124,30 @@ function MainPage() {
       </div>
 
       {/* Portfolio */}
-      <div className='portfolio'>
+      <div className='section portfolio'>
         <h1>
-          <FontAwesomeIcon icon={faPen} className='faPen' />
+          <FontAwesomeIcon icon={faPen} className='faPen icon' />
           PORTFOLIO
         </h1>
+        <div className='portfolio_container'>
+          <div className='portfolio_01'>
+            <div>
+              <img src='https://ifh.cc/g/YATHEp.jpg' alt='firstImg' />
+            </div>
+            <div>
+              <span>test1</span>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
 
-        <div className='portfolio_01'>
-          <div>
-            <img src='https://ifh.cc/g/YATHEp.jpg' alt='firstImg' />
-          </div>
-          <div>
-            <span>test1</span>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </div>
-        </div>
-
-        <div className='portfolio_02'>
-          <div>
-            <img src='https://ifh.cc/g/YATHEp.jpg' alt='SecondImg' />
-          </div>
-          <div>
-            <span>test1</span>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <div className='portfolio_02'>
+            <div>
+              <img src='https://ifh.cc/g/YATHEp.jpg' alt='SecondImg' />
+            </div>
+            <div>
+              <span>test1</span>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
           </div>
         </div>
       </div>
