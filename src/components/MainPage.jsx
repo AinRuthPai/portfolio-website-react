@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen, faCode, faIdCardClip } from "@fortawesome/free-solid-svg-icons";
+import { faPen, faCode, faIdCardClip, faFileCode } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function MainPage() {
@@ -108,7 +108,7 @@ function MainPage() {
               React
             </p>
             <p>
-              <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5 icon' />
+              <FontAwesomeIcon icon={faReact} size='2x' className='faReact icon' />
               Redux
             </p>
           </div>
@@ -117,8 +117,10 @@ function MainPage() {
               <FontAwesomeIcon icon={faGithub} size='2x' className='faGithub' />
               <h3>Github</h3>
             </div>
-            <span>지금까지 만들어 온 코드 저장소입니다.</span>
-            <a href='https://github.com/AinRuthPai'>https://github.com/AinRuthPai</a>
+            <span>지금까지 만들어 온 코드 저장소입니다. </span>
+            <a href='https://github.com/AinRuthPai' target='_blank'>
+              https://github.com/AinRuthPai
+            </a>
           </div>
         </div>
       </div>
@@ -131,21 +133,27 @@ function MainPage() {
         </h1>
         <div className='portfolio_container'>
           <div className='portfolio_01'>
-            <div>
-              <img src='https://ifh.cc/g/YATHEp.jpg' alt='firstImg' />
+            <div className='portfolio_imgbox'>
+              <img src='https://ifh.cc/g/Fia5g9.jpg' alt='firstImg' />
             </div>
             <div>
-              <span>test1</span>
+              <h3>
+                <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
+                신발 쇼핑몰
+              </h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </div>
           </div>
 
           <div className='portfolio_02'>
-            <div>
-              <img src='https://ifh.cc/g/YATHEp.jpg' alt='SecondImg' />
+            <div className='portfolio_imgbox'>
+              <img src='https://ifh.cc/g/VIK4w6.jpg' alt='SecondImg' />
             </div>
             <div>
-              <span>test1</span>
+              <h3>
+                <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
+                포트폴리오 웹사이트
+              </h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </div>
           </div>
