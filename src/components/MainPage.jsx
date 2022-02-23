@@ -4,11 +4,9 @@ import { faPen, faCode, faIdCardClip, faFileCode } from "@fortawesome/free-solid
 import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function MainPage() {
-  const aboutMeTitle = ["이름", "생년월일", "주소", "연락처", "이메일", "학력"];
-
   return (
     <>
-      <Carousel variant='dark'>
+      <Carousel variant='dark' className='carousel'>
         <Carousel.Item>
           <img
             style={{ height: "600px", objectFit: "contain" }}
@@ -16,10 +14,6 @@ function MainPage() {
             src='https://ifh.cc/g/xvk0LG.jpg'
             alt='First slide'
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
@@ -29,10 +23,6 @@ function MainPage() {
             src='https://ifh.cc/g/s8L0fh.jpg'
             alt='Second slide'
           />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
@@ -42,49 +32,49 @@ function MainPage() {
             src='https://ifh.cc/g/STXIKN.jpg'
             alt='Third slide'
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
       </Carousel>
 
       {/* About me */}
-      <div className='section about_me'>
+      <div className='section about_me' id='1'>
         <h1>
           <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip icon' />
           ABOUT ME
         </h1>
         <div className='row'>
           <div className='col-md-4'>
-            <h5>{aboutMeTitle[0]}</h5>
-            <p></p>
+            <h5>이름</h5>
+            <p>1</p>
           </div>
           <div className='col-md-4'>
-            <h5>{aboutMeTitle[1]}</h5>
-            <p>.02.03</p>
+            <h5>생년월일</h5>
+            <p>2</p>
           </div>
           <div className='col-md-4'>
-            <h5>{aboutMeTitle[2]}</h5>
-            <p>서울시</p>
+            <h5>주소지</h5>
+            <p>3</p>
           </div>
           <div className='col-md-4'>
-            <h5>{aboutMeTitle[3]}</h5>
-            <p>010</p>
+            <h5>전화번호</h5>
+            <p>4</p>
           </div>
           <div className='col-md-4'>
-            <h5>{aboutMeTitle[4]}</h5>
-            <p>@naver.com</p>
+            <h5>이메일</h5>
+            <p>5</p>
           </div>
           <div className='col-md-4'>
-            <h5>{aboutMeTitle[5]}</h5>
-            <p>수원과학대 컴퓨터정보과</p>
+            <h5>학력</h5>
+            <p>6</p>
           </div>
         </div>
       </div>
 
       {/* Skills */}
-      <div className='section skills'>
+      <div className='section skills' id='2'>
         <h1>
           <FontAwesomeIcon icon={faCode} className='faCode icon' />
           SKILLS & ARCHIVING
@@ -125,15 +115,15 @@ function MainPage() {
         </div>
       </div>
 
-      {/* Portfolio */}
-      <div className='section portfolio'>
+      {/* project */}
+      <div className='section project' id='3'>
         <h1>
           <FontAwesomeIcon icon={faPen} className='faPen icon' />
-          PORTFOLIO
+          PROJECT
         </h1>
-        <div className='portfolio_container'>
-          <div className='portfolio_01'>
-            <div className='portfolio_imgbox'>
+        <div className='project_container'>
+          <div className='project_01'>
+            <div className='project_imgbox'>
               <img src='https://ifh.cc/g/Fia5g9.jpg' alt='firstImg' />
             </div>
             <div>
@@ -145,8 +135,8 @@ function MainPage() {
             </div>
           </div>
 
-          <div className='portfolio_02'>
-            <div className='portfolio_imgbox'>
+          <div className='project_02'>
+            <div className='project_imgbox'>
               <img src='https://ifh.cc/g/VIK4w6.jpg' alt='SecondImg' />
             </div>
             <div>

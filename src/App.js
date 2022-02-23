@@ -3,6 +3,7 @@ import { Switch, Link, Route } from "react-router-dom";
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import Board from "./components/Board";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <MainPage />
+          <Footer />
         </Route>
 
         <Route path='/board'>
