@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen, faCode, faIdCardClip, faFileCode } from "@fortawesome/free-solid-svg-icons";
+import { faPen, faCode, faIdCardClip, faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function MainPage() {
@@ -131,7 +131,18 @@ function MainPage() {
                 <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                 신발 쇼핑몰
               </h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
             </div>
           </div>
 
@@ -144,7 +155,18 @@ function MainPage() {
                 <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                 포트폴리오 웹사이트
               </h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
             </div>
           </div>
         </div>
