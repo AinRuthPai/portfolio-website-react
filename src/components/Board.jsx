@@ -1,4 +1,5 @@
 import { Table, Button } from "react-bootstrap";
+import NewBoard from "./NewBoard";
 
 function Board() {
   return (
@@ -22,7 +23,7 @@ function Board() {
         </tbody>
       </Table>
 
-      <Button variant='primary' className='boardWriteBtn'>
+      <Button href='/board/newboard' variant='primary' className='boardWriteBtn'>
         글쓰기
       </Button>
     </>

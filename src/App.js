@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import Board from "./components/Board";
 import Footer from "./components/Footer";
+import NewBoard from "./components/NewBoard";
 
 function App() {
   return (
@@ -15,8 +16,12 @@ function App() {
           <Footer />
         </Route>
 
-        <Route path='/board'>
+        <Route exact path='/board'>
           <Board />
+        </Route>
+
+        <Route exact path='/board/newboard'>
+          <NewBoard />
         </Route>
       </Switch>
     </div>
