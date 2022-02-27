@@ -122,9 +122,9 @@ function MainPage() {
           PROJECT
         </h1>
         <div className='project_container'>
-          <div className='project_01'>
+          <div className='project_01 div_project'>
             <div className='project_imgbox'>
-              <img src='https://ifh.cc/g/Fia5g9.jpg' alt='firstImg' />
+              <img src='https://ifh.cc/g/Fia5g9.jpg' alt='Img' />
             </div>
             <div>
               <h3>
@@ -146,14 +146,38 @@ function MainPage() {
             </div>
           </div>
 
-          <div className='project_02'>
+          <div className='project_02 div_project'>
             <div className='project_imgbox'>
-              <img src='https://ifh.cc/g/VIK4w6.jpg' alt='SecondImg' />
+              <img src='https://ifh.cc/g/VIK4w6.jpg' alt='Img' />
             </div>
             <div>
               <h3>
                 <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                 포트폴리오 웹사이트
+              </h3>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
+                Nulla vitae elit libero, a pharetra augue mollis interdum.
+              </p>
+            </div>
+          </div>
+
+          <div className='project_03 div_project'>
+            <div className='project_imgbox'>
+              <img src='https://ifh.cc/g/Fia5g9.jpg' alt='Img' />
+            </div>
+            <div>
+              <h3>
+                <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
+                신발 쇼핑몰
               </h3>
               <p>
                 <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
