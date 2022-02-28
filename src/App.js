@@ -5,8 +5,12 @@ import MainPage from "./components/MainPage";
 import Board from "./components/Board";
 import Footer from "./components/Footer";
 import NewBoard from "./components/NewBoard";
+import { useState } from "react";
 
 function App() {
+  const [boardTitle, setBoardTitle] = useState([]);
+  const [inputText, setInputText] = useState("");
+
   return (
     <div className='App'>
       <Header />
@@ -17,11 +21,11 @@ function App() {
         </Route>
 
         <Route exact path='/board'>
-          <Board />
+          <Board boardTitle={boardTitle} />
         </Route>
 
         <Route exact path='/board/newboard'>
-          <NewBoard />
+          <NewBoard boardTitle={boardTitle} setBoardTitle={setBoardTitle} inputText={inputText} setInputText={setInputText} />
         </Route>
       </Switch>
     </div>

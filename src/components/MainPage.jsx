@@ -2,10 +2,11 @@ import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCode, faIdCardClip, faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
+import "../App.css";
 
 function MainPage() {
   return (
-    <>
+    <div className='mainpage'>
       <Carousel variant='dark' className='carousel'>
         <Carousel.Item>
           <img
@@ -195,7 +196,7 @@ function MainPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
