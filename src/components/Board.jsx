@@ -15,9 +15,9 @@ function Board(props) {
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            {props.boardTitle.map((post) => {
-              return <td>{post}</td>;
+            <td>{props.setId}</td>
+            {props.boardTitle.map((post, i) => {
+              return <td key={i}>{post}</td>;
             })}
             <td>작성자</td>
             <td>22.02.28</td>

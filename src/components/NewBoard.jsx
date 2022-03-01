@@ -19,7 +19,9 @@ function NewBoard(props) {
           const boardTitleAry = [...props.boardTitle];
           boardTitleAry.unshift(props.inputText);
           props.setBoardTitle(boardTitleAry);
-          console.log(boardTitleAry);
+          const boardId = [...props.id];
+          boardId++;
+          props.setId(boardId);
         }}>
         <Link to='/board'>작성 완료</Link>
       </Button>
