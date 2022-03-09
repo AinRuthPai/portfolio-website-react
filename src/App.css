@@ -190,6 +190,30 @@ a:hover {
   margin-bottom: 50px;
 }
 
+.form-wrapper {
+  width: 60%;
+  height: 70vh;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.title-input {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.board h3 {
+  margin: 20px 0px;
+}
+
 @media screen and (max-width: 1000px) {
   .me-auto {
     display: none;

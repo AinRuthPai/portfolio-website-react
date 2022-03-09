@@ -5,13 +5,8 @@ import MainPage from "./components/MainPage";
 import Board from "./components/Board";
 import Footer from "./components/Footer";
 import NewBoard from "./components/NewBoard";
-import { useState } from "react";
 
 function App() {
-  const [boardTitle, setBoardTitle] = useState([]);
-  const [inputText, setInputText] = useState("");
-  const [id, setId] = useState(0);
-
   return (
     <div className='App'>
       <Header />
@@ -21,20 +16,13 @@ function App() {
           <Footer />
         </Route>
 
-        <Route exact path='/board'>
-          <Board boardTitle={boardTitle} id={id} setId={setId} />
+        <Route path='/board'>
+          <Board />
         </Route>
-
+        {/* 
         <Route exact path='/board/newboard'>
-          <NewBoard
-            boardTitle={boardTitle}
-            setBoardTitle={setBoardTitle}
-            inputText={inputText}
-            setInputText={setInputText}
-            id={id}
-            setId={setId}
-          />
-        </Route>
+          <NewBoard />
+        </Route> */}
       </Switch>
     </div>
   );
