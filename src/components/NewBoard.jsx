@@ -1,12 +1,48 @@
-import { Button } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import Axios from "axios";
+import ReactHtmlParser from "react-html-parser";
+import { Table } from "react-bootstrap";
 
 function NewBoard() {
+  const [viewContent, setViewContent] = useState([]);
+
+  useEffect(() => {
+    Axios.get("http://localhost:3001/api/get").then((response) => {
+      setViewContent(response.data);
+    });
+  }, [viewContent]);
+
+  const deleteBoard = (idx) => {
+    Axios.delete("http://localhost:3001/api/delete", {
+      idx: viewContent.idx,
+    }).then((idx) => {
+      setViewContent(viewContent.filter((viewContent) => viewContent.idx !== idx));
+      alert("삭제 완료!");
+    });
+    return setViewContent;
+  };
+
   return (
-    <div className='newBoard'>
-      <input type='text' className='boardTitle' placeholder='제목을 입력하세요.' />
-      <input type='text' className='boardText' placeholder='내용을 입력하세요.' />
-      <Button variant='primary'>작성 완료</Button>
-    </div>
+    <Table striped bordered hover>
+      <thead>
+        <th>#</th>
+        <th>글 제목</th>
+        <th>내용</th>
+        <th>삭제</th>
+      </thead>
+      <tbody>
+        {viewContent.map((element) => (
+          <tr>
+            <td>{element.idx}</td>
+            <td>{element.title}</td>
+            <td>{ReactHtmlParser(element.content)}</td>
+            <td>
+              <button onClick={deleteBoard}>❌</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
   );
 }
 

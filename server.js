@@ -29,7 +29,15 @@ app.post("/api/insert", (req, res) => {
   const content = req.body.content;
   const sqlQuery = "INSERT INTO simpleboard (title, content) VALUES (?,?)";
   db.query(sqlQuery, [title, content], (err, result) => {
-    res.send("success!");
+    res.send("Success!");
+  });
+});
+
+app.delete("/api/delete", (req, res) => {
+  const idx = req.body.idx;
+  const sqlQuery = `DELETE FROM simpleboard WHERE idx = ${idx}`;
+  db.query(sqlQuery, (err, result) => {
+    res.send("Delete Success!");
   });
 });
 

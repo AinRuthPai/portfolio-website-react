@@ -10,13 +10,13 @@ function Board() {
     content: "",
   });
 
-  const [viewContent, setViewContent] = useState([]);
+  // const [viewContent, setViewContent] = useState([]);
 
-  useEffect(() => {
-    Axios.get("http://localhost:3001/api/get").then((response) => {
-      setViewContent(response.data);
-    });
-  }, [viewContent]);
+  // useEffect(() => {
+  //   Axios.get("http://localhost:3001/api/get").then((response) => {
+  //     setViewContent(response.data);
+  //   });
+  // }, [viewContent]);
 
   const submitReview = () => {
     Axios.post("http://localhost:3001/api/insert", {
@@ -38,14 +38,14 @@ function Board() {
   return (
     <div className='board'>
       <h3>게시글 작성</h3>
-      <div className='container'>
+      {/* <div className='container'>
         {viewContent.map((element) => (
           <div className='title'>
             <h2>{element.title}</h2>
             <div className='cont'>{ReactHtmlParser(element.content)}</div>
           </div>
         ))}
-      </div>
+      </div> */}
       <div className='form-wrapper'>
         <input className='title-input' type='text' placeholder='제목' onChange={getValue} name='title' />
         <CKEditor

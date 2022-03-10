@@ -19,10 +19,10 @@ function App() {
         <Route path='/board'>
           <Board />
         </Route>
-        {/* 
-        <Route exact path='/board/newboard'>
+
+        <Route path='/newboard'>
           <NewBoard />
-        </Route> */}
+        </Route>
       </Switch>
     </div>
   );

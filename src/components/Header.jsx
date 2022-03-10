@@ -22,7 +22,10 @@ function Header() {
             PROJECT
           </Link>
           <Nav.Link href='/board' className='header_board'>
-            BOARD
+            글 작성
+          </Nav.Link>
+          <Nav.Link href='/newboard' className='header_newBoard'>
+            게시판
           </Nav.Link>
         </Nav>
         <Nav.Link>
