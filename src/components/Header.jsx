@@ -21,12 +21,6 @@ function Header() {
           <Link to='3' className='header_project'>
             PROJECT
           </Link>
-          <Nav.Link href='/board' className='header_board'>
-            글 작성
-          </Nav.Link>
-          <Nav.Link href='/newboard' className='header_newBoard'>
-            게시판
-          </Nav.Link>
         </Nav>
         <Nav.Link>
           <FontAwesomeIcon icon={faBars} className='faBars' />

@@ -3,6 +3,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import ReactHtmlParser from "react-html-parser";
 import Axios from "axios";
+import { Table } from "react-bootstrap";
 
 function Board() {
   const [boardContent, setBoardContent] = useState({
@@ -10,13 +11,13 @@ function Board() {
     content: "",
   });
 
-  // const [viewContent, setViewContent] = useState([]);
+  const [viewContent, setViewContent] = useState([]);
 
-  // useEffect(() => {
-  //   Axios.get("http://localhost:3001/api/get").then((response) => {
-  //     setViewContent(response.data);
-  //   });
-  // }, [viewContent]);
+  useEffect(() => {
+    Axios.get("http://localhost:3001/api/get").then((response) => {
+      setViewContent(response.data);
+    });
+  }, [viewContent]);
 
   const submitReview = () => {
     Axios.post("http://localhost:3001/api/insert", {
@@ -71,6 +72,26 @@ function Board() {
       <button className='submit-button' onClick={submitReview}>
         작성 완료
       </button>
+      <Table striped bordered hover>
+        <thead>
+          <th>#</th>
+          <th>글 제목</th>
+          <th>내용</th>
+          <th>삭제</th>
+        </thead>
+        <tbody>
+          {viewContent.map((element) => (
+            <tr>
+              <td>{element.idx}</td>
+              <td>{element.title}</td>
+              <td>{ReactHtmlParser(element.content)}</td>
+              <td>
+                <button>❌</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
     </div>
   );
 }

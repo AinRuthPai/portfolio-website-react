@@ -13,16 +13,13 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <MainPage />
+          <Board />
           <Footer />
         </Route>
-
-        <Route path='/board'>
-          <Board />
-        </Route>
-
-        <Route path='/newboard'>
+        {/* 
+        <Route exact path='/newboard'>
           <NewBoard />
-        </Route>
+        </Route> */}
       </Switch>
     </div>
   );
