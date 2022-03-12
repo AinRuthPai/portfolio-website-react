@@ -28,7 +28,7 @@
 .header_aboutme,
 .header_skills,
 .header_project,
-.header_board {
+.header_comment {
   color: black;
   margin-right: 20px;
   transition: transform 50ms ease-out;
@@ -37,7 +37,7 @@
 .header_aboutme:hover,
 .header_skills:hover,
 .header_project:hover,
-.header_board:hover {
+.header_comment:hover {
   cursor: pointer;
   transform: scale(1.05);
   color: gray;
@@ -153,7 +153,7 @@ a:hover {
   color: white;
   width: 100%;
   height: 200px;
-  margin-top: 26px;
+  margin-top: 40px;
 }
 
 .footer div {
@@ -192,12 +192,9 @@ a:hover {
 }
 
 .form-wrapper {
-  width: 50%;
-  height: 40vh;
+  width: 60%;
+  padding-top: 40px;
   margin: auto;
-  border: 1px solid black;
-  border-radius: 20px;
-  padding: 10px;
 }
 
 .title-input {
@@ -211,8 +208,8 @@ a:hover {
   padding: 6px;
 }
 
-.board h3 {
-  margin: 20px 0px;
+.board h2 {
+  margin: 40px 0px;
 }
 
 .header_board {
@@ -222,6 +219,7 @@ a:hover {
 .submit-button {
   margin: 40px 0px;
 }
+
 @media screen and (max-width: 1000px) {
   .me-auto {
     display: none;

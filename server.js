@@ -36,7 +36,7 @@ app.post("/api/insert", (req, res) => {
 app.delete("/api/delete", (req, res) => {
   const idx = req.body.idx;
   const sqlQuery = `DELETE FROM simpleboard WHERE idx = ${idx}`;
-  db.query(sqlQuery, (err, result) => {
+  db.query(sqlQuery, [idx], (err, result) => {
     res.send("Delete Success!");
   });
 });

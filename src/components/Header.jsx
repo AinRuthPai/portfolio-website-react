@@ -21,6 +21,9 @@ function Header() {
           <Link to='3' className='header_project'>
             PROJECT
           </Link>
+          <Link to='4' className='header_comment'>
+            COMMENT
+          </Link>
         </Nav>
         <Nav.Link>
           <FontAwesomeIcon icon={faBars} className='faBars' />

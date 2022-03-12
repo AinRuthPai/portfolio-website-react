@@ -26,7 +26,7 @@ function NewBoard() {
     <Table striped bordered hover>
       <thead>
         <th>#</th>
-        <th>글 제목</th>
+        <th>댓글</th>
         <th>내용</th>
         <th>삭제</th>
       </thead>

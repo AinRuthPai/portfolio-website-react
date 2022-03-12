@@ -4,6 +4,8 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import ReactHtmlParser from "react-html-parser";
 import Axios from "axios";
 import { Table } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
 
 function Board() {
   const [boardContent, setBoardContent] = useState({
@@ -19,12 +21,18 @@ function Board() {
     });
   }, [viewContent]);
 
-  const submitReview = () => {
+  const submitComment = () => {
     Axios.post("http://localhost:3001/api/insert", {
       title: boardContent.title,
       content: boardContent.content,
     }).then(() => {
       alert("등록 완료!");
+    });
+  };
+
+  const deleteComment = () => {
+    Axios.delete("http://localhost:3001/api/delete", {}).then(() => {
+      alert("삭제 완료!");
     });
   };
 
@@ -37,16 +45,33 @@ function Board() {
   };
 
   return (
-    <div className='board'>
-      <h3>게시글 작성</h3>
-      {/* <div className='container'>
-        {viewContent.map((element) => (
-          <div className='title'>
-            <h2>{element.title}</h2>
-            <div className='cont'>{ReactHtmlParser(element.content)}</div>
-          </div>
-        ))}
-      </div> */}
+    <div className='board' id='4'>
+      <h2>
+        <FontAwesomeIcon icon={faPen} className='faPen icon' />
+        COMMENT
+      </h2>
+
+      <Table striped bordered hover>
+        <thead>
+          <th>#</th>
+          <th>댓글</th>
+          <th>내용</th>
+          <th>삭제</th>
+        </thead>
+        <tbody>
+          {viewContent.map((element) => (
+            <tr>
+              <td>{element.idx}</td>
+              <td>{element.title}</td>
+              <td>{ReactHtmlParser(element.content)}</td>
+              <td>
+                <button>❌</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+
       <div className='form-wrapper'>
         <input className='title-input' type='text' placeholder='제목' onChange={getValue} name='title' />
         <CKEditor
@@ -69,29 +94,9 @@ function Board() {
           }}
         />
       </div>
-      <button className='submit-button' onClick={submitReview}>
+      <button className='submit-button' onClick={submitComment}>
         작성 완료
       </button>
-      <Table striped bordered hover>
-        <thead>
-          <th>#</th>
-          <th>글 제목</th>
-          <th>내용</th>
-          <th>삭제</th>
-        </thead>
-        <tbody>
-          {viewContent.map((element) => (
-            <tr>
-              <td>{element.idx}</td>
-              <td>{element.title}</td>
-              <td>{ReactHtmlParser(element.content)}</td>
-              <td>
-                <button>❌</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
     </div>
   );
 }
