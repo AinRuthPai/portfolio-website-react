@@ -220,6 +220,10 @@ a:hover {
   margin: 40px 0px;
 }
 
+#custom-switch {
+  margin: 0;
+}
+
 @media screen and (max-width: 1000px) {
   .me-auto {
     display: none;
@@ -258,127 +262,3 @@ a:hover {
     height: 100%;
   }
 }
-
-/* :root {
-  --container-padding: 30px 0px;
-}
-
-.App {
-  text-align: center;
-}
-
-.about_me {
-  padding: var(--container-padding);
-  text-align: center;
-}
-
-.about_me h1 {
-  padding: var(--container-padding);
-}
-
-.col-md-4 {
-  margin-top: 5px;
-}
-
-.skills {
-  background-color: yellow;
-  padding: var(--container-padding);
-}
-
-.skills_container {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.skills_text {
-  margin-bottom: 40px;
-  cursor: default;
-}
-
-.skills p {
-  transition: transform 200ms ease-in;
-  padding-top: 8px;
-  margin-right: 50px;
-}
-
-.skills p:hover {
-  transform: scale(1.05);
-}
-
-.archiving {
-  width: 30vw;
-  height: 50vh;
-  background-color: white;
-  border-radius: 20px;
-  transition: transform 200ms ease-in;
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
-}
-
-.archiving_title {
-  padding-bottom: 30px;
-}
-
-.archiving a {
-  margin-top: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.archiving:hover {
-  transform: scale(1.01);
-}
-
-.project {
-  background-color: black;
-  color: white;
-}
-
-.project h1 {
-  padding: var(--container-padding);
-}
-
-.faIdCardClip,
-.faCode,
-.faPen {
-  margin-right: 15px;
-}
-
-.project_01,
-.project_02 {
-  height: 60vh;
-  width: 70vw;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 20px;
-  margin: 16px auto;
-  color: black;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  transition: transform 200ms ease-in;
-}
-
-.project_01:hover,
-.project_02:hover {
-  transform: scale(1.01);
-}
-
-.project img {
-  height: 400px;
-  width: 500px;
-  object-fit: contain;
-}
-
-.project p {
-  padding-top: 30px;
-}
-.board {
-  display: flex;
-}
-.boardWriteBtn {
-  margin-top: 50px;
-} */ ;

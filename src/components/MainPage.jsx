@@ -1,10 +1,13 @@
-import { Carousel } from "react-bootstrap";
+import { Carousel, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCode, faIdCardClip, faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../App.css";
+import { useState } from "react";
 
 function MainPage() {
+  let [modal, setModal] = useState(false);
+
   return (
     <div className='mainpage'>
       <Carousel variant='dark' className='carousel'>
@@ -195,6 +198,16 @@ function MainPage() {
             </div>
           </div>
         </div>
+
+        <Form>
+          <Form.Check
+            type='switch'
+            id='custom-switch'
+            onClick={() => {
+              setModal(!modal);
+            }}
+          />
+        </Form>
       </div>
     </div>
   );

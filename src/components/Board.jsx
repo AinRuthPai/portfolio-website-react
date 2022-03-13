@@ -3,11 +3,11 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import ReactHtmlParser from "react-html-parser";
 import Axios from "axios";
-import { Table } from "react-bootstrap";
+import { Table, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { faPen, faCheck } from "@fortawesome/free-solid-svg-icons";
 
-function Board() {
+function Board(props) {
   const [boardContent, setBoardContent] = useState({
     title: "",
     content: "",

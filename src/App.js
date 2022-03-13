@@ -6,14 +6,14 @@ import Board from "./components/Board";
 import Footer from "./components/Footer";
 import NewBoard from "./components/NewBoard";
 
-function App() {
+function App(props) {
   return (
     <div className='App'>
       <Header />
       <Switch>
         <Route exact path='/'>
           <MainPage />
-          <Board />
+          {props.modal === true ? <Board /> : null}
           <Footer />
         </Route>
         {/* 
