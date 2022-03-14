@@ -1,21 +1,18 @@
-import { Carousel, Form } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCode, faIdCardClip, faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../App.css";
-import { useState } from "react";
 
 function MainPage() {
-  let [modal, setModal] = useState(false);
-
   return (
     <div className='mainpage'>
-      <Carousel variant='dark' className='carousel'>
+      <Carousel variant='dark' className='carousel' id='0'>
         <Carousel.Item>
           <img
             style={{ height: "600px", objectFit: "contain" }}
             className='d-block w-100'
-            src='https://ifh.cc/g/xvk0LG.jpg'
+            src='https://images.unsplash.com/photo-1526649661456-89c7ed4d00b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1310&q=80'
             alt='First slide'
           />
         </Carousel.Item>
@@ -24,7 +21,7 @@ function MainPage() {
           <img
             style={{ height: "600px", objectFit: "contain" }}
             className='d-block w-100'
-            src='https://ifh.cc/g/s8L0fh.jpg'
+            src='https://images.unsplash.com/photo-1543058871-74a1d669ba70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
             alt='Second slide'
           />
         </Carousel.Item>
@@ -33,7 +30,7 @@ function MainPage() {
           <img
             style={{ height: "600px", objectFit: "contain" }}
             className='d-block w-100'
-            src='https://ifh.cc/g/STXIKN.jpg'
+            src='https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
             alt='Third slide'
           />
           {/* <Carousel.Caption>
@@ -45,10 +42,10 @@ function MainPage() {
 
       {/* About me */}
       <div className='section about_me' id='1'>
-        <h1>
+        <h2>
           <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip icon' />
           ABOUT ME
-        </h1>
+        </h2>
         <div className='row'>
           <div className='col-md-4'>
             <h5>이름</h5>
@@ -79,32 +76,25 @@ function MainPage() {
 
       {/* Skills */}
       <div className='section skills' id='2'>
-        <h1>
+        <h2>
           <FontAwesomeIcon icon={faCode} className='faCode icon' />
           SKILLS & ARCHIVING
-        </h1>
+        </h2>
         <div className='skills_archiving'>
           <div className='skills_container'>
-            <p>
-              <FontAwesomeIcon icon={faHtml5} size='2x' className='faHtml5 icon' />
-              HTML
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faCss3} size='2x' className='faCss3 icon' />
-              CSS
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faJs} size='2x' className='faJs icon' />
-              JavaScript
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faReact} size='2x' className='faReact icon' />
-              React
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faReact} size='2x' className='faReact icon' />
-              Redux
-            </p>
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png'
+              className='skills_logo'
+            />
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png'
+              className='skills_logo'
+            />
+            <img src='https://www.brutka.com/img/javascript-logo.png' className='skills_logo' />
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png'
+              className='skills_logo'
+            />
           </div>
           <div className='archiving_container'>
             <div className='archiving_text'>
@@ -121,10 +111,10 @@ function MainPage() {
 
       {/* project */}
       <div className='section project' id='3'>
-        <h1>
+        <h2>
           <FontAwesomeIcon icon={faPen} className='faPen icon' />
           PROJECT
-        </h1>
+        </h2>
         <div className='project_container'>
           <div className='project_01 div_project'>
             <div className='project_imgbox'>
@@ -133,19 +123,19 @@ function MainPage() {
             <div>
               <h3>
                 <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
-                신발 쇼핑몰
+                ShoeShop / 신발 쇼핑몰
               </h3>
               <p>
                 <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
+                React, Redux
               </p>
               <p>
                 <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
+                장바구니 기능과 Ajax 요청으로 데이터 불러오기를 구현한 사이트입니다.
               </p>
               <p>
                 <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
+                1인 개발 / 22년 1월 제작
               </p>
             </div>
           </div>
@@ -161,15 +151,15 @@ function MainPage() {
               </h3>
               <p>
                 <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
+                React
               </p>
               <p>
                 <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
+                게시판 기능을 구현한 지금 보고 계신 사이트입니다.
               </p>
               <p>
                 <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
+                1인 개발 / 22년 3월 제작
               </p>
             </div>
           </div>
@@ -181,7 +171,7 @@ function MainPage() {
             <div>
               <h3>
                 <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
-                신발 쇼핑몰
+                blank
               </h3>
               <p>
                 <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
@@ -198,16 +188,6 @@ function MainPage() {
             </div>
           </div>
         </div>
-
-        <Form>
-          <Form.Check
-            type='switch'
-            id='custom-switch'
-            onClick={() => {
-              setModal(!modal);
-            }}
-          />
-        </Form>
       </div>
     </div>
   );
