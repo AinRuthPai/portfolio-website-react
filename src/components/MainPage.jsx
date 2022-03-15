@@ -1,12 +1,21 @@
 import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCode, faIdCardClip, faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
-import { faHtml5, faCss3, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
-import "../App.css";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import MyModal from "./MyModal";
+import { useState } from "react";
 
 function MainPage() {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
   return (
     <div className='mainpage'>
+      <button onClick={handleClick}>Open Modal</button>
+      <MyModal isOpen={isOpen} />
+
       <Carousel variant='dark' className='carousel' id='0'>
         <Carousel.Item>
           <img
@@ -30,7 +39,7 @@ function MainPage() {
           <img
             style={{ height: "600px", objectFit: "contain" }}
             className='d-block w-100'
-            src='https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+            src='https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1633&q=80'
             alt='Third slide'
           />
           {/* <Carousel.Caption>

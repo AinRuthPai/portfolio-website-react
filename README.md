@@ -14,6 +14,14 @@
 
 - react-scroll
 
+- node-sass
+
+- sass
+
+- react-modal
+
+### 게시판
+
 - body-parser
   POST 방식의 데이터 요청을 처리하는 모듈입니다.
 

@@ -4,6 +4,11 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import ReactModal from "react-modal";
+
+ReactModal.setAppElement("#root");
+
+const rootElement = document.getElementById("root");
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +16,8 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById("root")
+  rootElement
+  // document.getElementById("root")
 );
 
 reportWebVitals();

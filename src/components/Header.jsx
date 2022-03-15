@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugSaucer, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
+import { useState } from "react";
 
 function Header() {
+  const [menuBar, setMenuBar] = useState(false);
+
   return (
     <div className='nav'>
       <div className='nav_container'>
@@ -10,20 +13,28 @@ function Header() {
           <FontAwesomeIcon icon={faMugSaucer} className='faMugSaucer' />
           FRONTEND
         </Link>
-
-        <Link to='1' className='header_menu'>
-          ABOUT ME
-        </Link>
-        <Link to='2' className='header_menu'>
-          SKILLS & ARCHIVING
-        </Link>
-        <Link to='3' className='header_menu'>
-          PROJECT
-        </Link>
-        <Link to='4' className='header_menu'>
-          COMMENT
-        </Link>
+        <div className={menuBar === true ? "show_bar" : "hidden_bar"}>
+          <Link to='1' className='header_menu'>
+            ABOUT ME
+          </Link>
+          <Link to='2' className='header_menu'>
+            SKILLS & ARCHIVING
+          </Link>
+          <Link to='3' className='header_menu'>
+            PROJECT
+          </Link>
+          <Link to='4' className='header_menu'>
+            COMMENT
+          </Link>
+        </div>
       </div>
+      <FontAwesomeIcon
+        icon={faBars}
+        className='faBars'
+        onClick={() => {
+          setMenuBar(!menuBar);
+        }}
+      />
     </div>
   );
 }
