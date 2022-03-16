@@ -1,31 +1,11 @@
-import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen, faCode, faIdCardClip, faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faIdCardClip } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import Modal from "react-modal";
 
 function MainPage() {
-  const [ModalOpen, setModalOpen] = useState(false);
-
   return (
     <div className='mainpage'>
-      <button
-        onClick={() => {
-          setModalOpen(true);
-        }}>
-        Modal Open
-      </button>
-      <Modal isOpen={true}>
-        modal content
-        <button
-          onClick={() => {
-            setModalOpen(false);
-          }}>
-          Close
-        </button>
-      </Modal>
-
       <Carousel variant='dark' className='carousel' id='0'>
         <Carousel.Item>
           <img
@@ -124,87 +104,6 @@ function MainPage() {
             <a href='https://github.com/AinRuthPai' target='_blank'>
               https://github.com/AinRuthPai
             </a>
-          </div>
-        </div>
-      </div>
-
-      {/* project */}
-      <div className='section project' id='3'>
-        <h2>
-          <FontAwesomeIcon icon={faPen} className='faPen icon' />
-          PROJECT
-        </h2>
-        <div className='project_container'>
-          <div className='project_01 div_project'>
-            <div className='project_imgbox'>
-              <img src='https://ifh.cc/g/Fia5g9.jpg' alt='Img' />
-            </div>
-            <div>
-              <h3>
-                <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
-                ShoeShop / 신발 쇼핑몰
-              </h3>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                React, Redux
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                장바구니 기능과 Ajax 요청으로 데이터 불러오기를 구현한 사이트입니다.
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                1인 개발 / 22년 1월 제작
-              </p>
-            </div>
-          </div>
-
-          <div className='project_02 div_project'>
-            <div className='project_imgbox'>
-              <img src='https://ifh.cc/g/VIK4w6.jpg' alt='Img' />
-            </div>
-            <div>
-              <h3>
-                <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
-                포트폴리오 웹사이트
-              </h3>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                React
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                게시판 기능을 구현한 지금 보고 계신 사이트입니다.
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                1인 개발 / 22년 3월 제작
-              </p>
-            </div>
-          </div>
-
-          <div className='project_03 div_project'>
-            <div className='project_imgbox'>
-              <img src='https://ifh.cc/g/Fia5g9.jpg' alt='Img' />
-            </div>
-            <div>
-              <h3>
-                <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
-                blank
-              </h3>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
-              </p>
-            </div>
           </div>
         </div>
       </div>

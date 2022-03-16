@@ -121,53 +121,6 @@ a:hover {
   padding: 20px 0px;
 }
 
-.project {
-  background-color: #1d809f;
-}
-
-.project h2 {
-  color: white;
-}
-
-.project_container {
-  width: 60%;
-  margin: auto;
-}
-
-.div_project {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
-  border-radius: 20px;
-  margin: 20px 0px;
-  padding: 10px 16px;
-  height: 80vh;
-  transition: transform 200ms ease-out;
-  box-shadow: 2px 2px 3px 2px #dadce0;
-}
-
-.div_project:hover {
-  transform: scale(1.03);
-}
-
-.project_imgbox {
-  width: 50%;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.project h3 {
-  margin-bottom: 20px;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -176,7 +129,7 @@ a:hover {
   background-color: black;
   color: white;
   width: 100%;
-  height: 200px;
+  height: 23vh;
   margin-top: 40px;
 }
 
@@ -186,6 +139,7 @@ a:hover {
 
 .footer a {
   color: white;
+  margin-bottom: 10px;
 }
 
 .table {
@@ -276,25 +230,7 @@ a:hover {
     align-items: center;
   }
 
-  .archiving_container {
-    margin: 10px 0px;
-  }
-
-  .div_project {
-    display: block;
-  }
-
-  .project_imgbox {
-    display: inline-block;
-    width: 50%;
-    height: 40%;
-    overflow: hidden;
-    margin-bottom: 10px;
-  }
-
-  .project img {
-    object-fit: contain;
-    max-width: auto;
-    height: 100%;
+  .skills_container {
+    margin: 0;
   }
 }

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import Board from "./components/Board";
 import Footer from "./components/Footer";
+import Project from "./components/Project";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <MainPage />
+          <Project />
           <Board />
           <Footer />
         </Route>
