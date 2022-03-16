@@ -1,20 +1,30 @@
+import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faCode, faIdCardClip, faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import MyModal from "./MyModal";
-import { useState } from "react";
+import Modal from "react-modal";
 
 function MainPage() {
-  const [isOpen, setOpen] = useState(false);
+  const [ModalOpen, setModalOpen] = useState(false);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
   return (
     <div className='mainpage'>
-      <button onClick={handleClick}>Open Modal</button>
-      <MyModal isOpen={isOpen} />
+      <button
+        onClick={() => {
+          setModalOpen(true);
+        }}>
+        Modal Open
+      </button>
+      <Modal isOpen={true}>
+        modal content
+        <button
+          onClick={() => {
+            setModalOpen(false);
+          }}>
+          Close
+        </button>
+      </Modal>
 
       <Carousel variant='dark' className='carousel' id='0'>
         <Carousel.Item>
