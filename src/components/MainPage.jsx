@@ -4,12 +4,23 @@ import { faCode, faIdCardClip } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function MainPage() {
+  const aboutMe = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  const aboutMeList = aboutMe.map((aboutme, i) => (
+    <div className='col-md-4'>
+      <h5>{aboutme}</h5>
+    </div>
+  ));
+
   return (
     <div className='mainpage'>
-      <Carousel variant='dark' className='carousel' id='0'>
+      <div className='mainImg' id='0'>
+        <img src='https://ifh.cc/g/jF79X0.jpg' />
+      </div>
+
+      {/* <Carousel variant='dark' className='carousel' id='0'>
         <Carousel.Item>
           <img
-            style={{ height: "600px", objectFit: "contain" }}
+            style={{ height: "90vh", width: "100vw", objectFit: "contain" }}
             className='d-block w-100'
             src='https://images.unsplash.com/photo-1526649661456-89c7ed4d00b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1310&q=80'
             alt='First slide'
@@ -18,7 +29,7 @@ function MainPage() {
 
         <Carousel.Item>
           <img
-            style={{ height: "600px", objectFit: "contain" }}
+            style={{ height: "90vh", width: "100vw", objectFit: "contain" }}
             className='d-block w-100'
             src='https://images.unsplash.com/photo-1543058871-74a1d669ba70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
             alt='Second slide'
@@ -27,17 +38,13 @@ function MainPage() {
 
         <Carousel.Item>
           <img
-            style={{ height: "600px", objectFit: "contain" }}
+            style={{ height: "90vh", width: "100vw", objectFit: "contain" }}
             className='d-block w-100'
             src='https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1633&q=80'
             alt='Third slide'
-          />
-          {/* <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption> */}
+          />        
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
 
       {/* About me */}
       <div className='section about_me' id='1'>
@@ -46,7 +53,8 @@ function MainPage() {
           ABOUT ME
         </h2>
         <div className='row'>
-          <div className='col-md-4'>
+          {aboutMeList}
+          {/* <div className='col-md-4'>
             <h5>이름</h5>
             <p>1</p>
           </div>
@@ -69,7 +77,7 @@ function MainPage() {
           <div className='col-md-4'>
             <h5>학력</h5>
             <p>6</p>
-          </div>
+          </div> */}
         </div>
       </div>
 
