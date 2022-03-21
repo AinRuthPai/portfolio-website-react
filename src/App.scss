@@ -1,11 +1,28 @@
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("./fonts/Cafe24SsurroundAir.ttf");
+}
+
+.moveTop {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  margin: 1rem 2rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  background-color: rgb(173, 173, 173);
+  border-radius: 26px;
+}
+
 a {
   text-decoration: none;
   color: black;
-  transition: all 50ms ease;
+  transition: transform 1s ease;
 }
 
 a:hover {
-  transform: scale(1.04);
+  transform: scale(1.02);
   color: black;
 }
 
@@ -16,19 +33,55 @@ a:hover {
   text-align: center;
 }
 
-.mainImg img {
-  width: 100%;
+.mainSection {
+  width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTitle {
+  font-family: "Cafe24SsurroundAir";
+  font-size: 34px;
+  margin-top: 5rem;
+}
+
+.mainSection span {
+  font-family: "Cafe24SsurroundAir";
+  font-size: 30px;
+}
+
+.arrow {
+  font-size: 40px;
+  margin-top: 4rem;
+  cursor: pointer;
+  color: whitesmoke;
+  transition: transform 0.5s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
 }
 
 .faMugSaucer {
   margin-right: 8px;
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
+.col-md-6 {
+  margin-bottom: 20px;
+}
+
+.col-md-6 h4 {
+  padding-bottom: 14px;
+}
+
+// -------------- Navigation Bar -------------- //
 .nav {
-  box-shadow: 2px 2px 3px 3px #dadce0;
+  box-shadow: 2px 2px 2px 2px #dadce0;
   position: fixed;
   width: 100%;
   background-color: white;
@@ -44,14 +97,25 @@ a:hover {
   transition: all 100ms ease;
 }
 
+.nav_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0px;
+}
+
+.faBars {
+  display: none;
+}
+
 .header_title {
   font-size: 22px;
-  margin-right: 200px;
+  margin-right: 5rem;
 }
 
 .header_menu {
   color: black;
-  margin-right: 20px;
+  margin-right: 2rem;
   transition: transform 50ms ease-out;
 }
 
@@ -66,24 +130,33 @@ a:hover {
   margin-right: 10px;
 }
 
+.header_faGithub {
+  margin-left: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.header_faGithub {
+  transform: scale(1.05);
+}
+
+// -------------- Main Page -------------- //
+
 .section {
-  padding-bottom: 40px;
+  padding-bottom: 90px;
 }
 
 .section h2 {
-  padding: 40px 0px;
+  padding: 70px 0px;
 }
 
 .skills_logo {
-  border: 1px solid white;
-  border-radius: 46%;
-  background-color: white;
+  background: none;
   width: 100px;
   height: 100px;
   object-fit: contain;
   margin-bottom: 20px;
+  margin-right: 20px;
   transition: transform 100ms ease-out;
-  box-shadow: 2px 2px 3px 2px #dadce0;
 }
 
 .skills_logo:hover {
@@ -91,61 +164,20 @@ a:hover {
 }
 
 .skills {
-  background-color: yellow;
-}
-
-.skills_archiving {
-  display: flex;
-  justify-content: center;
+  background-color: rgba(209, 209, 187, 0.5);
 }
 
 .skills_container {
   display: flex;
-  flex-direction: column;
-  margin-right: 40px;
-  font-size: 20px;
-}
-
-.archiving_container {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  background-color: white;
-  border-radius: 20px;
-  padding: 30px 50px;
-  margin-left: 40px;
-  transition: transform 100ms ease-out;
-  box-shadow: 2px 2px 3px 2px #dadce0;
 }
 
-.archiving_container:hover {
-  transform: scale(1.05);
-}
-
-.archiving_container span {
-  padding: 20px 0px;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 23vh;
+.skills_text {
+  font-size: 22px;
   margin-top: 40px;
 }
 
-.footer div {
-  margin-top: 6px;
-}
-
-.footer a {
-  color: white;
-  margin-bottom: 10px;
-}
+// -------------- Board -------------- //
 
 .table {
   width: 60vw;
@@ -182,29 +214,56 @@ a:hover {
   padding: 6px 6px;
 }
 
-.nav_container {
-  width: 60%;
+// -------------- Footer -------------- //
+
+.footer {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 16px 0px;
-  padding-left: 20px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 23vh;
+  margin-top: 40px;
 }
 
-.faBars {
-  display: none;
+.footer div {
+  margin-top: 6px;
 }
+
+.footer a {
+  color: white;
+  margin-bottom: 10px;
+}
+
+// -------------- 반응형 -------------- //
 
 @media screen and (max-width: 1000px) {
+  // -------------- 반응형 Navigation Bar -------------- //
+
   .faBars {
     display: block;
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
     font-size: 20px;
+    padding: 1rem 1rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
   }
 
   .faBars:hover {
     cursor: pointer;
     transform: scale(1.1);
     color: gray;
+  }
+
+  .header_faGithub {
+    position: absolute;
+    top: 4px;
+    right: 80px;
+    margin: 0;
+    padding: 1rem 1rem;
   }
 
   .show_bar {
@@ -219,25 +278,12 @@ a:hover {
 
   .nav_container {
     flex-direction: column;
-    padding-top: 12px;
-  }
-
-  .header_title {
-    margin-right: 22px;
+    padding-top: 16px;
   }
 
   .header_menu {
-    margin-top: 8px;
+    margin-top: 12px;
   }
 
-  .skills_archiving {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .skills_container {
-    margin: 0;
-  }
+  // -------------- 반응형 Main Page -------------- //
 }

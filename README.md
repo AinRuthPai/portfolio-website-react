@@ -20,6 +20,8 @@
 
 - react-modal
 
+- react-typist
+
 ### 게시판
 
 - body-parser
