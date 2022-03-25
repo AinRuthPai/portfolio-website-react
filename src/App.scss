@@ -3,6 +3,14 @@
   src: url("./fonts/Cafe24SsurroundAir.ttf");
 }
 
+// 드래그 방지
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .moveTop {
   position: fixed;
   bottom: 0;
@@ -142,11 +150,11 @@ a:hover {
 // -------------- Main Page -------------- //
 
 .section {
-  padding-bottom: 90px;
+  padding-bottom: 4rem;
 }
 
 .section h2 {
-  padding: 70px 0px;
+  padding: 4rem 0;
 }
 
 .skills_logo {
@@ -170,11 +178,20 @@ a:hover {
 .skills_container {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.skills_container > div {
+  padding: 1rem 1rem;
 }
 
 .skills_text {
-  font-size: 22px;
-  margin-top: 40px;
+  font-size: 20px;
+}
+
+.skills_text p {
+  display: inline-block;
+  font-weight: 700;
 }
 
 // -------------- Board -------------- //
@@ -286,4 +303,19 @@ a:hover {
   }
 
   // -------------- 반응형 Main Page -------------- //
+
+  .mainSection {
+    margin-bottom: 2rem;
+  }
+}
+
+// -------------- 모바일 -------------- //
+@media screen and (max-width: 700px) {
+  // 모바일 환경에서 navbar 삭제
+  .nav {
+    display: none;
+  }
+  .moveTop {
+    margin: 0;
+  }
 }

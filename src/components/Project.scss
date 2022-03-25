@@ -1,3 +1,4 @@
+// -------------- Modal 설정-------------- //
 .ReactModal__Body--open,
 .ReactModal__Html--open {
   overflow: hidden;
@@ -32,6 +33,7 @@
   opacity: 0;
 }
 
+// -------------- Project -------------- //
 .project {
   background-color: #1d809f;
 }
@@ -72,12 +74,16 @@
   object-position: top;
   overflow: hidden;
   border-radius: 25px;
+  border: 1px solid white;
 }
 
 .project_imgbox {
-  width: 60vw;
-  height: 70vh;
+  width: 50vw;
+  height: 60vh;
   margin: auto;
+  margin-top: 5rem;
+  box-shadow: 4px 4px 6px 4px #dadce0;
+  border-radius: 20px;
 }
 
 .project_imgbox img {
@@ -87,10 +93,40 @@
   padding-bottom: 20px;
 }
 
+.project_text {
+  margin: 1rem 0;
+}
+
+.project_text > h3 {
+  margin: 2rem 0;
+}
+
+.project_btn {
+  margin: 1rem 1rem;
+}
+
+// -------------- 반응형 -------------- //
 @media screen and (max-width: 900px) {
-  .project_container {
+  .project_container,
+  .project_container2,
+  .project_container3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .thumbnail {
+    width: 80vw;
+    height: 80vh;
+    margin-bottom: 2rem;
+  }
+
+  .project_imgbox {
+    width: 70vw;
+    height: 50vh;
+  }
+  .project_imgbox img {
+    object-fit: cover;
+    object-position: top;
   }
 }

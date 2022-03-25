@@ -16,12 +16,12 @@ function Project() {
 
   return (
     <>
-      <div className='section project' id='3'>
+      <section className='section project' id='3'>
         <h2>
           <FontAwesomeIcon icon={faPen} className='faPen icon' />
           PROJECT
         </h2>
-        <div className='project_container'>
+        <article className='project_container'>
           <div className='thumbnail'>
             <img
               src='https://ifh.cc/g/Fia5g9.jpg'
@@ -37,7 +37,7 @@ function Project() {
               <div className='project_imgbox'>
                 <img src='https://ifh.cc/g/Fia5g9.jpg' alt='Img' />
               </div>
-              <div>
+              <div className='project_text'>
                 <h3>
                   <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                   ShoeShop / 신발 쇼핑몰
@@ -56,13 +56,21 @@ function Project() {
                 </p>
               </div>
             </div>
-            <Button
-              variant='primary'
-              onClick={() => {
-                setModalOpen(false);
-              }}>
-              Close
-            </Button>
+            <div className='btn_part'>
+              <a href='https://github.com/AinRuthPai/react-shoppingmall' target='_blank'>
+                <Button variant='primary' className='project_btn btn_link'>
+                  Giuhub
+                </Button>
+              </a>
+              <Button
+                variant='primary'
+                className='project_btn'
+                onClick={() => {
+                  setModalOpen(false);
+                }}>
+                Close
+              </Button>
+            </div>
           </Modal>
 
           {/* 2번째 */}
@@ -81,7 +89,7 @@ function Project() {
               <div className='project_imgbox'>
                 <img src='https://ifh.cc/g/tSckA6.jpg' alt='Img' />
               </div>
-              <div>
+              <div className='project_text'>
                 <h3>
                   <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                   포트폴리오 웹사이트
@@ -96,21 +104,29 @@ function Project() {
                 </p>
                 <p>
                   <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                  1인 개발 / 22년 3월 제작
+                  1인 개발 / 22년 2월 제작
                 </p>
               </div>
             </div>
-            <Button
-              variant='primary'
-              onClick={() => {
-                setModalOpen2(false);
-              }}>
-              Close
-            </Button>
+            <div className='btn_part'>
+              <a href='https://github.com/AinRuthPai/portfolio-website-react' target='_blank'>
+                <Button variant='primary' className='project_btn btn_link'>
+                  Giuhub
+                </Button>
+              </a>
+              <Button
+                variant='primary'
+                className='project_btn'
+                onClick={() => {
+                  setModalOpen2(false);
+                }}>
+                Close
+              </Button>
+            </div>
           </Modal>
-        </div>
+        </article>
 
-        <div className='project_container2'>
+        <article className='project_container2'>
           {/* 3번째 */}
           <div className='thumbnail'>
             <img
@@ -127,7 +143,7 @@ function Project() {
               <div className='project_imgbox'>
                 <img src='https://ifh.cc/g/9GvRDw.png' alt='Img' />
               </div>
-              <div>
+              <div className='project_text'>
                 <h3>
                   <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                   KaKaoTalk
@@ -142,17 +158,25 @@ function Project() {
                 </p>
                 <p>
                   <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                  1인 개발 / 22년 1월 제작
+                  1인 개발 / 21년 8월 제작
                 </p>
               </div>
             </div>
-            <Button
-              variant='primary'
-              onClick={() => {
-                setModalOpen3(false);
-              }}>
-              Close
-            </Button>
+            <div className='btn_part'>
+              <a href='https://github.com/AinRuthPai/kokoa-clone-2021' target='_blank'>
+                <Button variant='primary' className='project_btn btn_link'>
+                  Giuhub
+                </Button>
+              </a>
+              <Button
+                variant='primary'
+                className='project_btn'
+                onClick={() => {
+                  setModalOpen3(false);
+                }}>
+                Close
+              </Button>
+            </div>
           </Modal>
 
           {/* 4번째 */}
@@ -171,7 +195,7 @@ function Project() {
               <div className='project_imgbox'>
                 <img src='https://ifh.cc/g/cNoXGY.png' alt='Img' />
               </div>
-              <div>
+              <div className='project_text'>
                 <h3>
                   <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                   그림판
@@ -186,21 +210,29 @@ function Project() {
                 </p>
                 <p>
                   <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                  1인 개발 / 22년 1월 제작
+                  1인 개발 / 22년 3월 제작
                 </p>
               </div>
             </div>
-            <Button
-              variant='primary'
-              onClick={() => {
-                setModalOpen4(false);
-              }}>
-              Close
-            </Button>
+            <div className='btn_part'>
+              <a href='https://github.com/AinRuthPai/paintBoardJs' target='_blank'>
+                <Button variant='primary' className='project_btn btn_link'>
+                  Giuhub
+                </Button>
+              </a>
+              <Button
+                variant='primary'
+                className='project_btn'
+                onClick={() => {
+                  setModalOpen4(false);
+                }}>
+                Close
+              </Button>
+            </div>
           </Modal>
-        </div>
+        </article>
 
-        <div className='project_container3'>
+        <article className='project_container3'>
           {/* 5번째 */}
           <div className='thumbnail'>
             <img
@@ -217,7 +249,7 @@ function Project() {
               <div className='project_imgbox'>
                 <img src='https://ifh.cc/g/QmjggH.png' alt='Img' />
               </div>
-              <div>
+              <div className='project_text'>
                 <h3>
                   <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                   테트리스
@@ -228,7 +260,7 @@ function Project() {
                 </p>
                 <p>
                   <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-                  테트리스 게임입니다.
+                  주로 활용되는 canvas 대신에 DOM을 활용한 테트리스 게임입니다.
                 </p>
                 <p>
                   <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
@@ -236,13 +268,21 @@ function Project() {
                 </p>
               </div>
             </div>
-            <Button
-              variant='primary'
-              onClick={() => {
-                setModalOpen5(false);
-              }}>
-              Close
-            </Button>
+            <div className='btn_part'>
+              <a href='https://github.com/AinRuthPai/tetris' target='_blank'>
+                <Button variant='primary' className='project_btn btn_link'>
+                  Giuhub
+                </Button>
+              </a>
+              <Button
+                variant='primary'
+                className='project_btn'
+                onClick={() => {
+                  setModalOpen5(false);
+                }}>
+                Close
+              </Button>
+            </div>
           </Modal>
 
           {/* 6번째 */}
@@ -261,7 +301,7 @@ function Project() {
               <div className='project_imgbox'>
                 <img src='https://ifh.cc/g/DmAwdR.jpg' alt='Img' />
               </div>
-              <div>
+              <div className='project_text'>
                 <h3>
                   <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
                   영화 순위 사이트
@@ -280,16 +320,24 @@ function Project() {
                 </p>
               </div>
             </div>
-            <Button
-              variant='primary'
-              onClick={() => {
-                setModalOpen6(false);
-              }}>
-              Close
-            </Button>
+            <div className='btn_part'>
+              <a href='https://github.com/AinRuthPai/nextjs-lecture' target='_blank'>
+                <Button variant='primary' className='project_btn btn_link'>
+                  Giuhub
+                </Button>
+              </a>
+              <Button
+                variant='primary'
+                className='project_btn'
+                onClick={() => {
+                  setModalOpen6(false);
+                }}>
+                Close
+              </Button>
+            </div>
           </Modal>
-        </div>
-      </div>
+        </article>
+      </section>
     </>
   );
 }

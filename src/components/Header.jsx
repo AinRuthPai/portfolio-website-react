@@ -24,9 +24,6 @@ function Header() {
           <Link to='3' className='header_menu'>
             PROJECT
           </Link>
-          <Link to='4' className='header_menu'>
-            COMMENT
-          </Link>
         </div>
       </div>
       <FontAwesomeIcon
