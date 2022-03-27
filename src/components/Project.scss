@@ -10,8 +10,8 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: auto;
   z-index: 99;
 }
@@ -43,7 +43,7 @@
 }
 
 .project h3 {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .project_container,
@@ -55,7 +55,7 @@
 }
 
 .thumbnail {
-  margin: 10px 10px;
+  margin: 1rem;
   width: 40vw;
   height: 50vh;
   overflow: hidden;
@@ -64,7 +64,7 @@
 
 .thumbnail:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .thumbnail img {
@@ -90,19 +90,19 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding-bottom: 20px;
+  padding-bottom: 1.5rem;
 }
 
 .project_text {
-  margin: 1rem 0;
+  margin-bottom: 0.5rem;
 }
 
-.project_text > h3 {
-  margin: 2rem 0;
+.project_text h3 {
+  margin: 1.5rem 0;
 }
 
 .project_btn {
-  margin: 1rem 1rem;
+  margin: 0.5rem;
 }
 
 // -------------- 반응형 -------------- //

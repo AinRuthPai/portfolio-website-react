@@ -60,7 +60,7 @@ function MainPage() {
           </div>
           <div className='col-md-6'>
             <h4>이메일</h4>
-            <p>5</p>
+            <p>tanbing@naver.com</p>
           </div>
           <div className='col-md-6'>
             <h4>학력</h4>

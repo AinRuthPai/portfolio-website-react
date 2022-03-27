@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
-import "./Project.scss";
-import "../App.scss";
 import Card from "./Card";
-import Data from "../Data.js";
+import ProjectData from "../ProjectData.js";
 
 function Project(props) {
-  const [project, setProject] = useState(Data);
+  const [project, setProject] = useState(ProjectData);
 
   return (
     <section className='section project' id='3'>

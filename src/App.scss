@@ -26,11 +26,11 @@ body {
 a {
   text-decoration: none;
   color: black;
-  transition: transform 1s ease;
+  transition: transform 0.5s ease;
 }
 
 a:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
   color: black;
 }
 
@@ -41,52 +41,6 @@ a:hover {
   text-align: center;
 }
 
-.mainSection {
-  width: 100vw;
-  height: 100vh;
-  background-color: skyblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.mainTitle {
-  font-family: "Cafe24SsurroundAir";
-  font-size: 34px;
-  margin-top: 5rem;
-}
-
-.mainSection span {
-  font-family: "Cafe24SsurroundAir";
-  font-size: 30px;
-}
-
-.arrow {
-  font-size: 40px;
-  margin-top: 4rem;
-  cursor: pointer;
-  color: whitesmoke;
-  transition: transform 0.5s ease;
-}
-
-.arrow:hover {
-  transform: scale(1.2);
-}
-
-.faMugSaucer {
-  margin-right: 8px;
-  margin-left: 1rem;
-}
-
-.col-md-6 {
-  margin-bottom: 20px;
-}
-
-.col-md-6 h4 {
-  padding-bottom: 14px;
-}
-
 // -------------- Navigation Bar -------------- //
 .nav {
   box-shadow: 2px 2px 2px 2px #dadce0;
@@ -94,7 +48,7 @@ a:hover {
   width: 100%;
   background-color: white;
   z-index: 10;
-  transition: all 100ms ease;
+  transition: all 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,14 +56,14 @@ a:hover {
 
 .nav:hover {
   padding: 4px 0px;
-  transition: all 100ms ease;
+  transition: all 0.3s ease;
 }
 
 .nav_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 0px;
+  padding: 1rem 0;
 }
 
 .faBars {
@@ -117,7 +71,7 @@ a:hover {
 }
 
 .header_title {
-  font-size: 22px;
+  font-size: 1.3rem;
   margin-right: 5rem;
 }
 
@@ -135,19 +89,69 @@ a:hover {
 }
 
 .icon {
-  margin-right: 10px;
+  margin-right: 0.6rem;
 }
 
 .header_faGithub {
   margin-left: 1rem;
-  transition: transform 0.5s ease;
+  transition: all 0.2s ease;
 }
 
-.header_faGithub {
+.header_faGithub:hover {
   transform: scale(1.05);
 }
 
 // -------------- Main Page -------------- //
+
+.mainSection {
+  width: 100vw;
+  height: 100vh;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTitle {
+  font-family: "Cafe24SsurroundAir";
+  font-size: 2rem;
+  margin-top: 5rem;
+}
+
+.mainSection span {
+  font-family: "Cafe24SsurroundAir";
+  font-size: 1.5rem;
+}
+
+.arrow {
+  font-size: 40px;
+  margin-top: 4rem;
+  cursor: pointer;
+  color: whitesmoke;
+  transition: transform 0.5s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+.faMugSaucer {
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+}
+
+.col-md-6 {
+  margin-bottom: 1.5rem;
+}
+
+.col-md-6 h4 {
+  padding-bottom: 1rem;
+}
+
+.col-md-6 p {
+  font-size: 1.1rem;
+}
 
 .section {
   padding-bottom: 4rem;
@@ -159,11 +163,11 @@ a:hover {
 
 .skills_logo {
   background: none;
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
   object-fit: contain;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
   transition: transform 100ms ease-out;
 }
 
@@ -186,50 +190,51 @@ a:hover {
 }
 
 .skills_text {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .skills_text p {
   display: inline-block;
+  margin: 0;
   font-weight: 700;
 }
 
 // -------------- Board -------------- //
 
-.table {
-  width: 60vw;
-  margin: auto;
-}
+// .table {
+//   width: 60vw;
+//   margin: auto;
+// }
 
-.form-wrapper {
-  width: 60%;
-  padding-top: 40px;
-  margin: auto;
-}
+// .form-wrapper {
+//   width: 60%;
+//   padding-top: 40px;
+//   margin: auto;
+// }
 
-.title-input {
-  width: 100%;
-  margin: 20px 0px;
-}
+// .title-input {
+//   width: 100%;
+//   margin: 20px 0px;
+// }
 
-.submit-button {
-  margin-top: 20px;
-  border-radius: 10px;
-  padding: 6px;
-}
+// .submit-button {
+//   margin-top: 20px;
+//   border-radius: 10px;
+//   padding: 6px;
+// }
 
-.board h2 {
-  padding: 40px 0px;
-}
+// .board h2 {
+//   padding: 40px 0px;
+// }
 
-.header_board {
-  color: black;
-}
+// .header_board {
+//   color: black;
+// }
 
-.submit-button {
-  margin: 40px 0px;
-  padding: 6px 6px;
-}
+// .submit-button {
+//   margin: 40px 0px;
+//   padding: 6px 6px;
+// }
 
 // -------------- Footer -------------- //
 
@@ -241,17 +246,17 @@ a:hover {
   background-color: black;
   color: white;
   width: 100%;
-  height: 23vh;
-  margin-top: 40px;
+  height: 13rem;
+  padding: 1rem 0;
 }
 
 .footer div {
-  margin-top: 6px;
+  margin-top: 0.5rem;
 }
 
 .footer a {
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 0.7rem;
 }
 
 // -------------- 반응형 -------------- //
@@ -306,6 +311,10 @@ a:hover {
 
   .mainSection {
     margin-bottom: 2rem;
+  }
+
+  .skills_text ul {
+    margin: 2.5rem 0;
   }
 }
 
