@@ -310,12 +310,12 @@ a:hover {
 }
 
 // -------------- 모바일 -------------- //
-@media screen and (max-width: 700px) {
-  // 모바일 환경에서 navbar 삭제
+@media screen and (max-width: 800px) {
+  // 모바일 환경에서 navbar, top 버튼 삭제
   .nav {
     display: none;
   }
   .moveTop {
-    margin: 0;
+    display: none;
   }
 }

@@ -96,7 +96,11 @@ function MainPage() {
                 className='skills_logo'
                 alt='img'
               />
-              <img src='http://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png' className='skills_logo' alt='img' />
+              <img
+                src='https://media.vlpt.us/images/sonofhuman20/post/7c171f4f-2b5c-45b8-928c-21ba4618c769/redux.png'
+                className='skills_logo'
+                alt='img'
+              />
               <img src='https://nawskcalb.com/image/skills/nodejs.png' className='skills_logo' alt='img' />
             </div>
           </div>
