@@ -1,4 +1,4 @@
-export default [
+const ProjectData = [
   {
     id: 0,
     title: "ShoeShop / 신발 쇼핑몰",
@@ -54,3 +54,5 @@ export default [
     link: "https://github.com/AinRuthPai/nextjs-lecture",
   },
 ];
+
+export default ProjectData;

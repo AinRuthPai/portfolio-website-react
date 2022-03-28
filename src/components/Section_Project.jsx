@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
-import Card from "./Card";
+import ArticleProject from "./Article_Project";
 import ProjectData from "../ProjectData.js";
 
-function Project(props) {
-  const [project, setProject] = useState(ProjectData);
+function SectionProject(props) {
+  const project = ProjectData;
 
   return (
     <section className='section project' id='3'>
@@ -14,21 +13,21 @@ function Project(props) {
         PROJECT
       </h2>
       <article className='project_container'>
-        <Card project={project[0]} />
-        <Card project={project[1]} />
+        <ArticleProject project={project[0]} />
+        <ArticleProject project={project[1]} />
       </article>
 
       <article className='project_container2'>
-        <Card project={project[2]} />
-        <Card project={project[3]} />
+        <ArticleProject project={project[2]} />
+        <ArticleProject project={project[3]} />
       </article>
 
       <article className='project_container3'>
-        <Card project={project[4]} />
-        <Card project={project[5]} />
+        <ArticleProject project={project[4]} />
+        <ArticleProject project={project[5]} />
       </article>
     </section>
   );
 }
 
-export default Project;
+export default SectionProject;

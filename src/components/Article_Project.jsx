@@ -1,10 +1,9 @@
-import { Button } from "react-bootstrap";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
-import { useState } from "react";
 
-function Card(props) {
+function ArticleProject(props) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -44,23 +43,20 @@ function Card(props) {
           </div>
         </div>
         <div className='btn_part'>
-          <a href={props.project.link} target='_blank'>
-            <Button variant='primary' className='project_btn btn_link'>
-              Giuhub
-            </Button>
+          <a href={props.project.link} target='_blank' rel='noopener noreferrer'>
+            <button className='project_btn btn_link'>Giuhub</button>
           </a>
-          <Button
-            variant='primary'
+          <button
             className='project_btn'
             onClick={() => {
               setModalOpen(false);
             }}>
             Close
-          </Button>
+          </button>
         </div>
       </Modal>
     </>
   );
 }
 
-export default Card;
+export default ArticleProject;

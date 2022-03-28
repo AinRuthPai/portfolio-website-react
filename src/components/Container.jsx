@@ -1,34 +1,31 @@
 import { useState, useEffect } from "react";
+import SectionFooter from "./Section_Footer";
+import SectionProject from "./Section_Project";
+import SectionHeader from "./Section_Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faIdCardClip, faCheck, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import Typist from "react-typist";
-import { Link } from "react-scroll";
 
-function MainPage() {
+function Container() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
     setCount(1);
   }, [count]);
 
-  const cursor = {
-    show: true,
-    blink: true,
-    element: "|",
-    hideWhenDone: true,
-    hideWhenDoneDelay: 10,
-  };
-
   return (
     <div className='mainpage'>
-      <Link to='0' className='moveTop'>
+      <SectionHeader />
+
+      <a href='#0' className='moveTop'>
         TOP
-      </Link>
+      </a>
+
       <section className='mainSection' id='0'>
         <div>
           <p className='mainTitle'>WELCOME !</p>
           {count ? (
-            <Typist avgTypingDelay={100} stdTypingDelay={10} cursor={cursor} onTypingDone={() => setCount(0)}>
+            <Typist avgTypingDelay={100} stdTypingDelay={10} onTypingDone={() => setCount(0)}>
               <span>Frontend Developer</span>
               <Typist.Backspace count={20} delay={100} />
               <span>Hoon's Portfolio!</span>
@@ -38,9 +35,9 @@ function MainPage() {
             ""
           )}
         </div>
-        <Link to='1' className='arrow'>
+        <a href='#1'>
           <FontAwesomeIcon icon={faSortDown} className='faSortDown icon' />
-        </Link>
+        </a>
       </section>
 
       {/* About me */}
@@ -78,30 +75,14 @@ function MainPage() {
         <div className='skills_container'>
           <div>
             <div className='skills_icon_box'>
-              <img
-                src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png'
-                className='skills_logo'
-                alt='img'
-              />
-              <img
-                src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png'
-                className='skills_logo'
-                alt='img'
-              />
-              <img src='https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png' className='skills_logo' alt='img' />
+              <img src={process.env.PUBLIC_URL + "/img/html5.png"} className='skills_logo' alt='html5' />
+              <img src={process.env.PUBLIC_URL + "/img/css3.png"} className='skills_logo' alt='css3' />
+              <img src={process.env.PUBLIC_URL + "/img/js.png"} className='skills_logo' alt='js' />
             </div>
             <div className='skills_icon_box2'>
-              <img
-                src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png'
-                className='skills_logo'
-                alt='img'
-              />
-              <img
-                src='https://media.vlpt.us/images/sonofhuman20/post/7c171f4f-2b5c-45b8-928c-21ba4618c769/redux.png'
-                className='skills_logo'
-                alt='img'
-              />
-              <img src='https://nawskcalb.com/image/skills/nodejs.png' className='skills_logo' alt='img' />
+              <img src={process.env.PUBLIC_URL + "/img/react.png"} className='skills_logo' alt='react' />
+              <img src={process.env.PUBLIC_URL + "/img/redux.png"} className='skills_logo' alt='redux' />
+              <img src={process.env.PUBLIC_URL + "/img/nodejs.png"} className='skills_logo' alt='nodejs' />
             </div>
           </div>
           <div className='skills_text'>
@@ -121,15 +102,13 @@ function MainPage() {
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
               Redux를 이용하여 <p>상태 관리</p>가 가능합니다.
             </ul>
-            <ul>
-              <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              소소하지만 꾸준함을 증명하기 위해 <p>Github 1일 1 commit</p>을 시행중입니다.
-            </ul>
           </div>
         </div>
       </section>
+      <SectionProject />
+      <SectionFooter />
     </div>
   );
 }
 
-export default MainPage;
+export default Container;
