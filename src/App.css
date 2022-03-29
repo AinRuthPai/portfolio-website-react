@@ -276,12 +276,11 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-.project_container,
-.project_container2,
-.project_container3 {
-  display: flex;
-  width: 70%;
-  margin: auto;
+.project_container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .thumbnail {
@@ -343,12 +342,8 @@ a:hover {
 
 /*  -------------- 반응형 --------------  */
 @media screen and (max-width: 900px) {
-  .project_container,
-  .project_container2,
-  .project_container3 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .project_container {
+    grid-template-columns: auto;
   }
 
   .thumbnail {

@@ -13,18 +13,9 @@ function SectionProject(props) {
         PROJECT
       </h2>
       <article className='project_container'>
-        <ArticleProject project={project[0]} />
-        <ArticleProject project={project[1]} />
-      </article>
-
-      <article className='project_container2'>
-        <ArticleProject project={project[2]} />
-        <ArticleProject project={project[3]} />
-      </article>
-
-      <article className='project_container3'>
-        <ArticleProject project={project[4]} />
-        <ArticleProject project={project[5]} />
+        {project.map((array, i) => {
+          return <ArticleProject project={project[i]} i={i} key={i} />;
+        })}
       </article>
     </section>
   );
