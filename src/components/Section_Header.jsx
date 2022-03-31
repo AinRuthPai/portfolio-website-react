@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMugSaucer, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 function SectionHeader() {
@@ -10,7 +10,7 @@ function SectionHeader() {
       <div className='nav'>
         <div className='nav_container'>
           <a href='#0' className='header_title'>
-            <img src={process.env.PUBLIC_URL + "/img/logo.png"} alt='logo' className='header_logo' />
+            <img src={process.env.PUBLIC_URL + "/img/logo.png"} alt='header_logo' className='header_logo' />
             FRONTEND
           </a>
           <div className={menuBar === true ? "show_bar" : "hidden_bar"}>
@@ -34,7 +34,7 @@ function SectionHeader() {
         />
         <div className='header_github'>
           <a href='https://github.com/AinRuthPai' target='_blank' rel='noopener noreferrer'>
-            <img src={process.env.PUBLIC_URL + "/img/github.png"} className='header_github' alt='github' />
+            <img src={process.env.PUBLIC_URL + "/img/github.png"} className='header_github' alt='header_github' />
           </a>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
 
-function ArticleProject(props) {
+function ArticleProjectModal(props) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -59,4 +59,4 @@ function ArticleProject(props) {
   );
 }
 
-export default ArticleProject;
+export default ArticleProjectModal;

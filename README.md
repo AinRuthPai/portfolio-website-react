@@ -2,14 +2,14 @@
 
 ## 설치된 라이브러리 & 모듈
 
-- react-router-dom
+    create-react-app: 5.0.0
+    fortawesome/fontawesome-svg-core: 1.3.0
+    fortawesome/free-solid-svg-icons: 6.0.0
+    fortawesome/react-fontawesome: 0.1.17
+    react-modal: 3.14.4
+    react-typist: 2.0.5
 
 - react-fontawesome / free-solid-svg-icons
-
-- bootstrap
-
-- react-scroll :
-  nav bar에서 부드럽게 스크롤이 가능하게 해 주는 라이브러리입니다.
 
 - react-modal :
   Project 상세 페이지의 modal 창을 간편하게 구현할 수 있는 라이브러리입니다.
