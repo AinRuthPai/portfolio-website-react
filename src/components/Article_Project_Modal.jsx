@@ -10,7 +10,7 @@ function ArticleProjectModal(props) {
     <>
       <div className='thumbnail'>
         <img
-          src={props.id === props.key ? props.project.img : null}
+          src={props.project.img}
           alt='Img'
           onClick={() => {
             setModalOpen(true);
@@ -21,7 +21,7 @@ function ArticleProjectModal(props) {
       <Modal isOpen={modalOpen} onRequestClose={() => setModalOpen(false)}>
         <div className='project_01 div_project'>
           <div className='project_imgbox'>
-            <img src={props.id === props.key ? props.project.img : null} alt='Img' />
+            <img src={props.project.img} alt='Img' />
           </div>
           <div className='project_text'>
             <h3>
