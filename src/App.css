@@ -93,9 +93,9 @@ a:hover {
 
 .header_title {
   display: flex;
+  align-items: center;
   font-size: 1.3rem;
   margin-right: 5rem;
-  margin-top: 0.5rem;
 }
 
 .header_logo {
@@ -151,7 +151,7 @@ a:hover {
 .mainTitle {
   font-family: "Cafe24SsurroundAir";
   font-size: 2rem;
-  margin-top: 5rem;
+  margin: 4rem 0;
 }
 
 .mainSection span {
@@ -186,22 +186,25 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-.col-md-6 h4 {
-  padding-bottom: 0.5rem;
+.col-md-6 p:first-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 
-.col-md-6 p {
-  font-size: 1rem;
+.col-md-6 p:last-child {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .section {
   padding-bottom: 4rem;
 }
 
-.section h2 {
+.section > p {
   font-size: 1.7rem;
+  font-weight: 600;
   padding: 3rem 0;
-  margin: 0;
 }
 
 .skills_logo {
@@ -232,8 +235,9 @@ a:hover {
   padding: 1rem 1rem;
 }
 
-.skills_text {
+.skills_text ul {
   font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .skills_text p {
@@ -282,7 +286,7 @@ a:hover {
   background-color: #1d809f;
 }
 
-.project h2 {
+.project p:first-child {
   color: white;
 }
 
@@ -393,8 +397,8 @@ a:hover {
   padding: 1rem 0;
 }
 
-.footer div {
-  margin-top: 0.5rem;
+.footer p {
+  margin-top: 0.7rem;
 }
 
 .footer a {

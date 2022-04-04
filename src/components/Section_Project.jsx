@@ -8,10 +8,10 @@ function SectionProject(props) {
 
   return (
     <section className='section project' id='3'>
-      <h2>
+      <p>
         <FontAwesomeIcon icon={faPen} className='faPen icon' />
         PROJECT
-      </h2>
+      </p>
       <article className='project_container'>
         {project.map((array, i) => {
           return <ArticleProjectModal project={project[i]} i={i} key={i} />;

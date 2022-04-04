@@ -42,25 +42,25 @@ function Container() {
 
       {/* About me */}
       <section className='section about_me' id='1'>
-        <h2>
+        <p>
           <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip icon' />
           ABOUT ME
-        </h2>
+        </p>
         <div className='row'>
           <div className='col-md-6'>
-            <h4>이름</h4>
+            <p>이름</p>
             <p>백훈찬</p>
           </div>
           <div className='col-md-6'>
-            <h4>생년월일</h4>
+            <p>생년월일</p>
             <p>93.02.03 / 30</p>
           </div>
           <div className='col-md-6'>
-            <h4>이메일</h4>
+            <p>이메일</p>
             <p>tanbing@naver.com</p>
           </div>
           <div className='col-md-6'>
-            <h4>학력</h4>
+            <p>학력</p>
             <p>수원과학대 컴퓨터정보학과</p>
           </div>
         </div>
@@ -68,10 +68,10 @@ function Container() {
 
       {/* Skills */}
       <section className='section skills' id='2'>
-        <h2>
+        <p>
           <FontAwesomeIcon icon={faCode} className='faCode icon' />
           SKILLS
-        </h2>
+        </p>
         <div className='skills_container'>
           <div>
             <div className='skills_icon_box'>
