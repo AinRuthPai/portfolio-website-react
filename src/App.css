@@ -187,13 +187,13 @@ a:hover {
 }
 
 .col-md-6 p:first-child {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
 
 .col-md-6 p:last-child {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
@@ -201,8 +201,8 @@ a:hover {
   padding-bottom: 4rem;
 }
 
-.section > p {
-  font-size: 1.7rem;
+.section > h1 {
+  font-size: 1.8rem;
   font-weight: 600;
   padding: 3rem 0;
 }
@@ -235,15 +235,13 @@ a:hover {
   padding: 1rem 1rem;
 }
 
-.skills_text ul {
+.skills_text p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
-.skills_text p {
-  display: inline-block;
-  margin: 0;
-  font-weight: 700;
+.skills_text strong {
+  font-weight: 800;
 }
 
 /*  -------------- Modal 설정--------------  */
@@ -286,7 +284,7 @@ a:hover {
   background-color: #1d809f;
 }
 
-.project p:first-child {
+.project h1:first-child {
   color: white;
 }
 

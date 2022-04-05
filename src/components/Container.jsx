@@ -3,7 +3,7 @@ import SectionFooter from "./Section_Footer";
 import SectionProject from "./Section_Project";
 import SectionHeader from "./Section_Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faIdCardClip, faCheck, faSortDown } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faIdCardClip, faCheck, faSortDown, faPen, faEnvelope, faPerson, faCakeCandles } from "@fortawesome/free-solid-svg-icons";
 import Typist from "react-typist";
 
 function Container() {
@@ -14,7 +14,7 @@ function Container() {
   }, [count]);
 
   return (
-    <div className='mainpage'>
+    <main className='mainpage'>
       <SectionHeader />
 
       <a href='#0' className='moveTop'>
@@ -42,25 +42,37 @@ function Container() {
 
       {/* About me */}
       <section className='section about_me' id='1'>
-        <p>
+        <h1>
           <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip icon' />
           ABOUT ME
-        </p>
+        </h1>
         <div className='row'>
           <div className='col-md-6'>
-            <p>이름</p>
+            <p>
+              <FontAwesomeIcon icon={faPerson} className='faPerson icon' />
+              이름
+            </p>
             <p>백훈찬</p>
           </div>
           <div className='col-md-6'>
-            <p>생년월일</p>
+            <p>
+              <FontAwesomeIcon icon={faCakeCandles} className='faCakeCandles icon' />
+              생년월일
+            </p>
             <p>93.02.03 / 30</p>
           </div>
           <div className='col-md-6'>
-            <p>이메일</p>
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} className='faEnvelope icon' />
+              이메일
+            </p>
             <p>tanbing@naver.com</p>
           </div>
           <div className='col-md-6'>
-            <p>학력</p>
+            <p>
+              <FontAwesomeIcon icon={faPen} className='faPen icon' />
+              학력
+            </p>
             <p>수원과학대 컴퓨터정보학과</p>
           </div>
         </div>
@@ -68,10 +80,10 @@ function Container() {
 
       {/* Skills */}
       <section className='section skills' id='2'>
-        <p>
+        <h1>
           <FontAwesomeIcon icon={faCode} className='faCode icon' />
           SKILLS
-        </p>
+        </h1>
         <div className='skills_container'>
           <div>
             <div className='skills_icon_box'>
@@ -86,28 +98,28 @@ function Container() {
             </div>
           </div>
           <div className='skills_text'>
-            <ul>
+            <p>
+              <FontAwesomeIcon icon={faCheck} className='faCheck icon' />웹 표준, 웹 접근성을 고려한 <strong>시멘틱 마크업</strong> 작업이
+              가능합니다.
+            </p>
+            <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              <p>웹 표준, 웹 접근성</p> 을 고려한 시멘틱 마크업 작업이 가능합니다.
-            </ul>
-            <ul>
+              CSS Media Query를 사용하여 <strong>반응형 웹</strong> 제작이 가능합니다.
+            </p>
+            <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              CSS Media Query를 사용하여 <p>반응형 웹</p> 제작이 가능합니다.
-            </ul>
-            <ul>
+              JavaScript, React를 사용하여 <strong>DOM 객체 제어</strong>가 가능합니다.
+            </p>
+            <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              JavaScript, React를 사용하여 <p>DOM 객체 제어</p>가 가능합니다.
-            </ul>
-            <ul>
-              <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              Redux를 이용하여 <p>상태 관리</p>가 가능합니다.
-            </ul>
+              Redux를 이용하여 <strong>상태 관리</strong>가 가능합니다.
+            </p>
           </div>
         </div>
       </section>
       <SectionProject />
       <SectionFooter />
-    </div>
+    </main>
   );
 }
 
