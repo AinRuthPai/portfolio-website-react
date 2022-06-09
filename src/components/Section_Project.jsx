@@ -13,8 +13,8 @@ function SectionProject() {
         PROJECT
       </h1>
       <article className='project_container'>
-        {project.map((array, i) => {
-          return <ArticleProjectModal project={project[i]} i={i} key={i} />;
+        {project.map((modalContent) => {
+          return <ArticleProjectModal modalContent={modalContent} key={modalContent.id} />;
         })}
       </article>
     </section>

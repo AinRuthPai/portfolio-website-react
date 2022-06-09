@@ -1,21 +1,53 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileCode, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faFileCode, faCheck, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
 
-function ArticleProjectModal(props) {
+function ArticleProjectModal({ modalContent }) {
   const [modalOpen, setModalOpen] = useState(false);
+  const [currentPos, setCurrentPos] = useState(0);
+  let moveImgRef = useRef();
 
-  function carousel() {}
+  useEffect(() => {
+    if (modalOpen === false) {
+      setCurrentPos(0);
+    }
+  }, [modalOpen]);
 
-  function onLeftMove() {}
-  function onRightMove() {}
+  useEffect(() => {
+    if (moveImgRef.current) {
+      const { current } = moveImgRef;
+      if (currentPos + 1) {
+        current.style.transform = `translateX(-${currentPos}00%)`;
+        current.style.transition = `all 0.5s ease-in-out`;
+      } else if (currentPos - 1) {
+        current.style.transform = `translateX(${currentPos}00%)`;
+        current.style.transition = `all 0.5s ease-in-out`;
+      }
+    }
+  }, [currentPos]);
+
+  const onMoveRight = () => {
+    if (currentPos !== 3) {
+      setCurrentPos(currentPos + 1);
+    } else {
+      setCurrentPos(3);
+    }
+  };
+
+  const onMoveLeft = () => {
+    if (currentPos !== 0) {
+      setCurrentPos(currentPos - 1);
+    } else {
+      setCurrentPos(0);
+    }
+  };
 
   return (
     <>
       <div className='thumbnail'>
         <img
-          src={props.project.img}
+          src={modalContent.img}
           alt='Img'
           onClick={() => {
             setModalOpen(true);
@@ -23,37 +55,43 @@ function ArticleProjectModal(props) {
         />
       </div>
 
-      <Modal isOpen={modalOpen} onRequestClose={() => setModalOpen(false)}>
+      <Modal isOpen={modalOpen} ariaHideApp={false} onRequestClose={() => setModalOpen(false)}>
         <div className='project_01 div_project'>
-          <div className='project_imgbox'>
-            <img src={props.project.img} alt='Img' />
-            <img src={props.project.img} alt='Img' />
-            <img src={props.project.img} alt='Img' />
-            <img src={props.project.img} alt='Img' />
+          <div className='project_carousel'>
+            <div className='project_imgbox' ref={moveImgRef} style={{ transform: "translateX", transition: "all 0.5s ease-in-out" }}>
+              <img src={modalContent.img} alt='Img' />
+              <img src={modalContent.img} alt='Img' />
+              <img src={modalContent.img} alt='Img' />
+              <img src={modalContent.img} alt='Img' />
+            </div>
+            <button className='leftBtn' onClick={onMoveLeft}>
+              <FontAwesomeIcon icon={faAngleLeft} className='faAngleLeft' />
+            </button>
+            <button className='rightBtn' onClick={onMoveRight}>
+              <FontAwesomeIcon icon={faAngleRight} className='faAngleRight' />
+            </button>
           </div>
-          <button className='left'>left</button>
-          <button className='right'>right</button>
           <div className='project_text'>
             <h3>
               <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
-              {props.project.title}
+              {modalContent.title}
             </h3>
             <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              {props.project.stack}
+              {modalContent.stack}
             </p>
             <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              {props.project.content}
+              {modalContent.content}
             </p>
             <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              {props.project.date}
+              {modalContent.date}
             </p>
           </div>
         </div>
         <div className='btn_part'>
-          <a href={props.project.link} target='_blank' rel='noopener noreferrer'>
+          <a href={modalContent.link} target='_blank' rel='noopener noreferrer'>
             <button className='project_btn btn_link'>Giuhub</button>
           </a>
           <button

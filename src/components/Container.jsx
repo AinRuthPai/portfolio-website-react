@@ -7,10 +7,10 @@ import { faCode, faIdCardClip, faCheck, faSortDown, faPen, faEnvelope, faPerson,
 import Typist from "react-typist";
 
 function Container() {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(true);
 
   useEffect(() => {
-    setCount(1);
+    setCount(true);
   }, [count]);
 
   return (
@@ -25,7 +25,7 @@ function Container() {
         <div>
           <p className='mainTitle'>WELCOME !</p>
           {count ? (
-            <Typist avgTypingDelay={100} stdTypingDelay={10} onTypingDone={() => setCount(0)}>
+            <Typist avgTypingDelay={100} stdTypingDelay={10} onTypingDone={() => setCount(false)}>
               <span>Frontend Developer</span>
               <Typist.Backspace count={20} delay={100} />
               <span>Hoon's Portfolio!</span>
