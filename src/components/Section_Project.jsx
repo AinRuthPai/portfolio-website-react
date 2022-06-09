@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import ArticleProjectModal from "./Article_Project_Modal";
-import ProjectData from "../ProjectData.js";
+import projectData from "../ProjectData.js";
 
-function SectionProject(props) {
-  const project = ProjectData;
+function SectionProject() {
+  const project = projectData;
 
   return (
     <section className='section project' id='3'>

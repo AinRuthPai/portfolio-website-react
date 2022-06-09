@@ -32,6 +32,23 @@ code {
   src: url("./fonts/Cafe24SsurroundAir.ttf");
 }
 
+.mainpage {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+strong {
+  font-weight: 800;
+}
+
 .moveTop {
   position: fixed;
   bottom: 0;
@@ -199,7 +216,15 @@ a:hover {
 
 .section {
   padding-bottom: 4rem;
+  /* opacity: 0;
+  transition: all 0.5s ease;
+  transform: translate(0, 500px); */
 }
+/* 
+.section .show {
+  opacity: 1;
+  transform: none;
+} */
 
 .section > h1 {
   font-size: 1.8rem;
@@ -238,10 +263,7 @@ a:hover {
 .skills_text p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-}
-
-.skills_text strong {
-  font-weight: 800;
+  line-height: 2rem;
 }
 
 /*  -------------- Modal 설정--------------  */
@@ -323,12 +345,11 @@ a:hover {
 }
 
 .project_imgbox {
-  width: 50vw;
   height: 60vh;
-  margin: auto;
   margin-top: 5rem;
-  box-shadow: 4px 4px 6px 4px #dadce0;
-  border-radius: 20px;
+  display: flex;
+  position: relative;
+  /* overflow-x: hidden; */
 }
 
 .project_imgbox img {
@@ -336,6 +357,19 @@ a:hover {
   height: 100%;
   object-fit: contain;
   padding-bottom: 1.5rem;
+  box-shadow: 4px 4px 6px 4px #dadce0;
+  border-radius: 20px;
+}
+
+.left,
+.right {
+  position: absolute;
+  z-index: 999;
+  border: 3px solid blue;
+}
+
+.left {
+  left: 100px;
 }
 
 .project_text p {
@@ -465,6 +499,10 @@ a:hover {
     margin-bottom: 2rem;
   }
 
+  .skills_logo {
+    height: 4rem;
+  }
+
   .skills_text ul {
     margin: 2.5rem 0;
   }
@@ -476,7 +514,7 @@ a:hover {
 }
 
 /*  -------------- 모바일 --------------  */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   /* 모바일 환경에서 navbar, top 버튼 삭제 */
   .nav {
     display: none;

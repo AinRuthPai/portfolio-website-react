@@ -6,6 +6,11 @@ import Modal from "react-modal";
 function ArticleProjectModal(props) {
   const [modalOpen, setModalOpen] = useState(false);
 
+  function carousel() {}
+
+  function onLeftMove() {}
+  function onRightMove() {}
+
   return (
     <>
       <div className='thumbnail'>
@@ -22,7 +27,12 @@ function ArticleProjectModal(props) {
         <div className='project_01 div_project'>
           <div className='project_imgbox'>
             <img src={props.project.img} alt='Img' />
+            <img src={props.project.img} alt='Img' />
+            <img src={props.project.img} alt='Img' />
+            <img src={props.project.img} alt='Img' />
           </div>
+          <button className='left'>left</button>
+          <button className='right'>right</button>
           <div className='project_text'>
             <h3>
               <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />

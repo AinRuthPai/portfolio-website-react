@@ -8,11 +8,3 @@
     fortawesome/react-fontawesome: 0.1.17
     react-modal: 3.14.4
     react-typist: 2.0.5
-
-- react-fontawesome / free-solid-svg-icons
-
-- react-modal :
-  Project 상세 페이지의 modal 창을 간편하게 구현할 수 있는 라이브러리입니다.
-
-- react-typist :
-  MainPage에서 간편하게 타이핑 효과를 낼 수 있는 라이브러리입니다.
