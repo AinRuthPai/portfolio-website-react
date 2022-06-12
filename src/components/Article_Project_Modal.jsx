@@ -28,10 +28,10 @@ function ArticleProjectModal({ modalContent }) {
   }, [currentPos]);
 
   const onMoveRight = () => {
-    if (currentPos !== 3) {
+    if (currentPos !== modalContent.img.length - 1) {
       setCurrentPos(currentPos + 1);
     } else {
-      setCurrentPos(3);
+      setCurrentPos(modalContent.img.length - 1);
     }
   };
 
@@ -47,7 +47,7 @@ function ArticleProjectModal({ modalContent }) {
     <>
       <div className='thumbnail'>
         <img
-          src={modalContent.img}
+          src={modalContent.img[0]}
           alt='Img'
           onClick={() => {
             setModalOpen(true);
@@ -59,10 +59,9 @@ function ArticleProjectModal({ modalContent }) {
         <div className='project_01 div_project'>
           <div className='project_carousel'>
             <div className='project_imgbox' ref={moveImgRef} style={{ transform: "translateX", transition: "all 0.5s ease-in-out" }}>
-              <img src={modalContent.img} alt='Img' />
-              <img src={modalContent.img} alt='Img' />
-              <img src={modalContent.img} alt='Img' />
-              <img src={modalContent.img} alt='Img' />
+              {modalContent.img.map((data, i) => {
+                return <img src={data} alt='Img' key={i} />;
+              })}
             </div>
             <button className='leftBtn' onClick={onMoveLeft}>
               <FontAwesomeIcon icon={faAngleLeft} className='faAngleLeft' />
