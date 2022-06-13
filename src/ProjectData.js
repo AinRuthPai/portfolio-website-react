@@ -20,7 +20,11 @@ const projectData = [
     id: 1,
     title: "포트폴리오 웹사이트",
     stack: "React",
-    content: "지금 보고 계신 사이트입니다.",
+    content: [
+      "지금 보고 계신 사이트입니다.",
+      "dkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    ],
     date: "1인 개발 / 22년 2월 제작",
     img: [
       process.env.PUBLIC_URL + "/img/portfolio/portfolio-main.png",
