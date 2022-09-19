@@ -79,10 +79,12 @@ function ArticleProjectModal({ modalContent }) {
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
               {modalContent.stack}
             </p>
+            {/* {modalContent.content.map()} */}
             <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
               {modalContent.content}
             </p>
+
             <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
               {modalContent.date}

@@ -289,12 +289,12 @@ a:hover {
   height: 100%;
   margin: auto;
   z-index: 99;
+  overflow: auto;
 }
 
 .ReactModal__Content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   box-shadow: 4px 4px 6px 4px #dadce0;
@@ -399,17 +399,21 @@ a:hover {
 }
 
 .project_text {
-  width: 80%;
+  width: 60vw;
   margin: 0 auto;
+  overflow-wrap: normal;
 }
 
 .project_text p {
+  width: 100%;
+  word-wrap: break-word;
   margin-bottom: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .project_text h3 {
-  margin: 1.5rem 0;
-  font-size: 1.5rem;
+  margin: 2rem 0;
+  font-size: 1.7rem;
 }
 
 .project_btn {
@@ -425,7 +429,7 @@ a:hover {
 }
 
 /*  -------------- 반응형 --------------  */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .project_container {
     grid-template-columns: auto;
   }
@@ -477,7 +481,7 @@ a:hover {
 
 /* -------------- 반응형 -------------- */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   /*  -------------- 반응형 Navigation Bar --------------  */
 
   .faBars {
