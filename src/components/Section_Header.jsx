@@ -15,13 +15,13 @@ function SectionHeader() {
           </a>
           <div className={menuBar === true ? "show_bar" : "hidden_bar"}>
             <a href='#1' className='header_menu'>
-              ABOUT ME
+              PROJECT
             </a>
             <a href='#2' className='header_menu'>
               SKILLS
             </a>
             <a href='#3' className='header_menu'>
-              PROJECT
+              INFOMATION
             </a>
           </div>
         </div>

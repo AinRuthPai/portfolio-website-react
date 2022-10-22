@@ -22,6 +22,18 @@ function Container() {
       </a>
 
       <section className='mainSection' id='0'>
+        <div className='website_link'>
+          <p>
+            <a href='https://github.com/AinRuthPai' target='_blank' rel='noopener noreferrer'>
+              GITHUB
+            </a>
+          </p>
+          <p>
+            <a href='https://velog.io/@ainruthpai' target='_blank' rel='noopener noreferrer'>
+              VELOG
+            </a>
+          </p>
+        </div>
         <div>
           <p className='mainTitle'>WELCOME !</p>
           {count ? (
@@ -35,46 +47,13 @@ function Container() {
             ""
           )}
         </div>
+
         <a href='#1'>
           <FontAwesomeIcon icon={faSortDown} className='faSortDown icon' />
         </a>
       </section>
 
-      {/* About me */}
-      <section className='section about_me' id='1'>
-        <h1>
-          <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip icon' />
-          INTRODUCE
-        </h1>
-        <div className='row'>
-          <div className='col-md-6'>
-            <p>
-              <FontAwesomeIcon icon={faPerson} className='faPerson icon' />
-            </p>
-            <p>
-              신입 프론트엔드 개발자 <strong>백훈찬</strong>입니다.
-            </p>
-          </div>
-          <div className='col-md-6'>
-            <p>
-              <FontAwesomeIcon icon={faCakeCandles} className='faCakeCandles icon' />
-            </p>
-            <p>93.02.03 / 30살 입니다.</p>
-          </div>
-          <div className='col-md-6'>
-            <p>
-              <FontAwesomeIcon icon={faEnvelope} className='faEnvelope icon' />
-            </p>
-            <p>untitle0203@gmail.com</p>
-          </div>
-          <div className='col-md-6'>
-            <p>
-              <FontAwesomeIcon icon={faPen} className='faPen icon' />
-            </p>
-            <p>수원과학대 컴퓨터정보학과</p>
-          </div>
-        </div>
-      </section>
+      <SectionProject />
 
       {/* Skills */}
       <section className='section skills' id='2'>
@@ -115,7 +94,42 @@ function Container() {
           </div>
         </div>
       </section>
-      <SectionProject />
+
+      {/* About me */}
+      <section className='section about_me' id='3'>
+        <h1>
+          <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip icon' />
+          INFOMATION
+        </h1>
+        <div className='row'>
+          <div className='col-md-6'>
+            <p>
+              <FontAwesomeIcon icon={faPerson} className='faPerson icon' />
+            </p>
+            <p>
+              신입 프론트엔드 개발자 <strong>백훈찬</strong>입니다.
+            </p>
+          </div>
+          <div className='col-md-6'>
+            <p>
+              <FontAwesomeIcon icon={faCakeCandles} className='faCakeCandles icon' />
+            </p>
+            <p>93.02.03 / 30살 입니다.</p>
+          </div>
+          <div className='col-md-6'>
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} className='faEnvelope icon' />
+            </p>
+            <p>untitle0203@gmail.com</p>
+          </div>
+          <div className='col-md-6'>
+            <p>
+              <FontAwesomeIcon icon={faPen} className='faPen icon' />
+            </p>
+            <p>수원과학대 컴퓨터정보학과</p>
+          </div>
+        </div>
+      </section>
       <SectionFooter />
     </main>
   );

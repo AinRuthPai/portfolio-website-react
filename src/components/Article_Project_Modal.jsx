@@ -75,10 +75,11 @@ function ArticleProjectModal({ modalContent }) {
               <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
               {modalContent.title}
             </h3>
-            <p>
-              <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              {modalContent.stack}
-            </p>
+            <div className='stack_container'>
+              {modalContent.stack.map((stack) => {
+                return <div className='stack'>{stack}</div>;
+              })}
+            </div>
             {/* {modalContent.content.map()} */}
             <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
