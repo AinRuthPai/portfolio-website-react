@@ -15,10 +15,10 @@ function SectionHeader() {
           </a>
           <div className={menuBar === true ? "show_bar" : "hidden_bar"}>
             <a href='#1' className='header_menu'>
-              PROJECT
+              SKILLS
             </a>
             <a href='#2' className='header_menu'>
-              SKILLS
+              PROJECT
             </a>
             <a href='#3' className='header_menu'>
               INFOMATION
@@ -32,11 +32,6 @@ function SectionHeader() {
             setMenuBar(!menuBar);
           }}
         />
-        <div className='header_github'>
-          <a href='https://github.com/AinRuthPai' target='_blank' rel='noopener noreferrer'>
-            <img src={process.env.PUBLIC_URL + "/img/github.png"} className='header_github' alt='header_github' />
-          </a>
-        </div>
       </div>
     </>
   );

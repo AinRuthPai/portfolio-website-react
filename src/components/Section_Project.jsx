@@ -7,7 +7,7 @@ function SectionProject() {
   const project = projectData;
 
   return (
-    <section className='section project' id='1'>
+    <section className='section project' id='2'>
       <h1>
         <FontAwesomeIcon icon={faPen} className='faPen icon' />
         PROJECT

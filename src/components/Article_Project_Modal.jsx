@@ -15,8 +15,8 @@ function ArticleProjectModal({ modalContent }) {
   }, [modalOpen]);
 
   useEffect(() => {
-    if (moveImgRef.current) {
-      const { current } = moveImgRef;
+    const { current } = moveImgRef;
+    if (current) {
       if (currentPos + 1) {
         current.style.transform = `translateX(-${currentPos}00%)`;
         current.style.transition = `all 0.5s ease-in-out`;
