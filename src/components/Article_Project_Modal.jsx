@@ -80,7 +80,6 @@ function ArticleProjectModal({ modalContent }) {
                 return <div className='stack'>{stack}</div>;
               })}
             </div>
-            {/* {modalContent.content.map()} */}
             <p>
               <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
               {modalContent.content}
@@ -93,16 +92,15 @@ function ArticleProjectModal({ modalContent }) {
           </div>
         </div>
         <div className='btn_part'>
-          <a href={modalContent.link} target='_blank' rel='noopener noreferrer'>
-            <button className='project_btn btn_link'>Giuhub</button>
-          </a>
           <button
-            className='project_btn'
             onClick={() => {
               setModalOpen(false);
             }}>
             Close
           </button>
+          <a href={modalContent.link} target='_blank' rel='noopener noreferrer'>
+            <button className='btn_link'>Go to Giuhub</button>
+          </a>
         </div>
       </Modal>
     </>

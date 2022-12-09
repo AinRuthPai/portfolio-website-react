@@ -32,11 +32,11 @@ function SectionSkills() {
           </p>
           <p>
             <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-            React Hooks를 이용한 함수형 기반의 코드를 작성합니다.
+            React Hooks를 이용한 <strong>함수형 기반</strong>의 코드를 작성합니다.
           </p>
           <p>
             <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-            Redux를 이용하여 <strong>상태 관리</strong>가 가능합니다.
+            React-Redux를 이용하여 <strong>상태 관리</strong>가 가능합니다.
           </p>
         </div>
       </div>
