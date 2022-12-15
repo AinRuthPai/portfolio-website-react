@@ -1,24 +1,27 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
+
+const SkillsImg = styled.img`
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+`;
 
 function SectionSkills() {
   return (
-    <section className='section skills' id='1'>
-      <h1>
-        <FontAwesomeIcon icon={faCode} className='faCode icon' />
-        SKILLS
-      </h1>
+    <section className='section skills'>
       <div className='skills_container'>
         <div>
-          <div className='skills_icon_box'>
-            <img src={process.env.PUBLIC_URL + "/img/html5.png"} className='skills_logo' alt='html5' />
-            <img src={process.env.PUBLIC_URL + "/img/css3.png"} className='skills_logo' alt='css3' />
-            <img src={process.env.PUBLIC_URL + "/img/js.png"} className='skills_logo' alt='js' />
+          <div>
+            <SkillsImg src={process.env.PUBLIC_URL + "/img/html5.png"} className='skills_logo' alt='html5' />
+            <SkillsImg src={process.env.PUBLIC_URL + "/img/css3.png"} className='skills_logo' alt='css3' />
+            <SkillsImg src={process.env.PUBLIC_URL + "/img/js.png"} className='skills_logo' alt='js' />
           </div>
-          <div className='skills_icon_box2'>
-            <img src={process.env.PUBLIC_URL + "/img/react.png"} className='skills_logo' alt='react' />
-            <img src={process.env.PUBLIC_URL + "/img/redux.png"} className='skills_logo' alt='redux' />
-            <img src={process.env.PUBLIC_URL + "/img/nodejs.png"} className='skills_logo' alt='nodejs' />
+          <div>
+            <SkillsImg src={process.env.PUBLIC_URL + "/img/react.png"} className='skills_logo' alt='react' />
+            <SkillsImg src={process.env.PUBLIC_URL + "/img/redux.png"} className='skills_logo' alt='redux' />
+            <SkillsImg src={process.env.PUBLIC_URL + "/img/nodejs.png"} className='skills_logo' alt='nodejs' />
           </div>
         </div>
         <div className='skills_text'>

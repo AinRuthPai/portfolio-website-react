@@ -2,6 +2,22 @@ import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCode, faCheck, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
+import styled from "styled-components";
+
+const ModalContent = styled.img`
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  overflow: hidden;
+  transition: transform 0.1s ease-in-out;
+
+  :hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 2px 2px 4px 4px #e2e2e2;
+  }
+`;
 
 function ArticleProjectModal({ modalContent }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -46,7 +62,7 @@ function ArticleProjectModal({ modalContent }) {
   return (
     <>
       <div className='thumbnail'>
-        <img
+        <ModalContent
           src={modalContent.img[0]}
           alt='Img'
           onClick={() => {

@@ -1,12 +1,48 @@
-import "./reset.css";
-import "./App.css";
-import Container from "./components/Container";
+import SectionProject from "./components/Section_Project";
+import SectionNav from "./components/Section_Nav";
+import SectionSkills from "./components/Section_Skills";
+import SectionAboutMe from "./components/Section_AboutMe";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+
+const Global = createGlobalStyle`
+  background-color: #e2e2e2;
+`;
+
+const AllContents = styled.div`
+  display: flex;
+  width: 90%;
+  margin: 100px auto;
+  font-family: "Pretendard-Regular";
+
+  @font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+`;
+
+const MainContents = styled.div`
+  width: 80%;
+`;
 
 function App() {
   return (
-    <div className='App'>
-      <Container />
-    </div>
+    <BrowserRouter>
+      <Global />
+      <AllContents>
+        <SectionNav />
+        <MainContents>
+          <Routes>
+            <Route path='/' element={<SectionProject />} />
+            <Route path='/skills' element={<SectionSkills />} />
+            <Route path='/aboutme' element={<SectionAboutMe />} />
+          </Routes>
+        </MainContents>
+      </AllContents>
+    </BrowserRouter>
   );
 }
 
