@@ -1,42 +1,61 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIdCardClip, faPen, faEnvelope, faPerson, faCakeCandles } from "@fortawesome/free-solid-svg-icons";
+import { faPen, faEnvelope, faPerson, faFileCode, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { Section } from "./Section_Skills";
+import styled from "styled-components";
+
+const SectionAbout = styled(Section)`
+  flex-direction: column;
+
+  > p {
+    font-size: 18px;
+  }
+`;
+
+const MyImg = styled.img`
+  border: 1px solid black;
+  width: 25%;
+  height: 40%;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  object-fit: contain;
+`;
 
 function SectionAboutMe() {
   return (
-    <section className='section about_me'>
-      <h1>
-        <FontAwesomeIcon icon={faIdCardClip} className='faIdCardClip icon' />
-        INFOMATION
-      </h1>
-      <div className='row'>
-        <div className='col-md-6'>
-          <p>
-            <FontAwesomeIcon icon={faPerson} className='faPerson icon' />
-          </p>
-          <p>
-            신입 프론트엔드 개발자 <strong>백훈찬</strong>입니다.
-          </p>
-        </div>
-        <div className='col-md-6'>
-          <p>
-            <FontAwesomeIcon icon={faCakeCandles} className='faCakeCandles icon' />
-          </p>
-          <p>93.02.03 / 30살 입니다.</p>
-        </div>
-        <div className='col-md-6'>
-          <p>
-            <FontAwesomeIcon icon={faEnvelope} className='faEnvelope icon' />
-          </p>
-          <p>untitle0203@gmail.com</p>
-        </div>
-        <div className='col-md-6'>
-          <p>
-            <FontAwesomeIcon icon={faPen} className='faPen icon' />
-          </p>
-          <p>수원과학대 컴퓨터정보학과</p>
-        </div>
-      </div>
-    </section>
+    <SectionAbout>
+      <h1>About me</h1>
+      <MyImg />
+      <p>
+        <FontAwesomeIcon icon={faPerson} />
+        백훈찬
+      </p>
+
+      <p>
+        <FontAwesomeIcon icon={faPhone} />
+        Tel : 010-9159-0579
+      </p>
+
+      <p>
+        <FontAwesomeIcon icon={faEnvelope} />
+        E-mail : untitle0203@gmail.com
+      </p>
+
+      <p>
+        <FontAwesomeIcon icon={faFileCode} />
+        github :
+        <a href='https://github.com/AinRuthPai' target='_blank' rel='noopener noreferrer'>
+          https://github.com/AinRuthPai
+        </a>
+      </p>
+
+      <p>
+        <FontAwesomeIcon icon={faPen} />
+        velog :
+        <a href='https://velog.io/@ainruthpai' target='_blank' rel='noopener noreferrer'>
+          https://velog.io/@ainruthpai
+        </a>
+      </p>
+    </SectionAbout>
   );
 }
 

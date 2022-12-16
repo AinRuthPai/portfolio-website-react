@@ -4,16 +4,11 @@ import SectionSkills from "./components/Section_Skills";
 import SectionAboutMe from "./components/Section_AboutMe";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
-
-const Global = createGlobalStyle`
-  background-color: #e2e2e2;
-`;
 
 const AllContents = styled.div`
   display: flex;
   width: 90%;
-  margin: 100px auto;
+  margin: 3% auto;
   font-family: "Pretendard-Regular";
 
   @font-face {
@@ -31,7 +26,6 @@ const MainContents = styled.div`
 function App() {
   return (
     <BrowserRouter>
-      <Global />
       <AllContents>
         <SectionNav />
         <MainContents>

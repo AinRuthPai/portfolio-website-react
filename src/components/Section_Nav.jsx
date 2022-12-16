@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   width: 20%;
+  margin-top: 3%;
 
   > img:first-child {
-    width: 250px;
-    height: 150px;
+    border: 1px solid black;
+    width: 70%;
     object-fit: contain;
   }
   > p:nth-child(2) {
@@ -14,15 +15,20 @@ const Nav = styled.nav`
   }
 
   > div:nth-child(3) {
-    font-size: 32px;
-    margin: 80px 0;
+    font-size: 28px;
+    margin: 20% 0;
   }
 
   > div:nth-child(4) {
-    font-size: 18px;
-    line-height: 10px;
+    line-height: 8px;
     color: #7f7f7f;
-    margin-bottom: 50px;
+    margin-bottom: 10%;
+  }
+
+  > div:last-child > a > img {
+    width: 40px;
+    margin-left: 10px;
+    border-radius: 50%;
   }
 `;
 
@@ -34,7 +40,7 @@ const LinkStyle = styled(Link)`
 function SectionNav() {
   return (
     <Nav>
-      <img src={process.env.PUBLIC_URL + "/img/4.png"} alt='1' />
+      <img src={process.env.PUBLIC_URL + "/img/4.png"} alt='myimg' />
       <p>Baek HoonChan</p>
       <div>
         <p>

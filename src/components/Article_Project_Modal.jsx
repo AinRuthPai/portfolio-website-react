@@ -4,19 +4,57 @@ import { faFileCode, faCheck, faAngleLeft, faAngleRight } from "@fortawesome/fre
 import Modal from "react-modal";
 import styled from "styled-components";
 
-const ModalContent = styled.img`
-  width: 500px;
-  height: 300px;
+const ModalThumbNail = styled.img`
+  width: 100%;
   object-fit: cover;
   object-position: top;
   overflow: hidden;
   transition: transform 0.1s ease-in-out;
+  border-radius: 20px;
 
   :hover {
     cursor: pointer;
     transform: scale(1.01);
-    box-shadow: 2px 2px 4px 4px #e2e2e2;
+    box-shadow: 4px 4px 4px 4px #e2e2e2;
   }
+`;
+const ModalContainer = styled.div`
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 4px 6px 4px #dadce0;
+
+  > button {
+    position: absolute;
+    z-index: 99;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+  }
+  > button:nth-child(2) {
+    left: 0;
+    top: 50%;
+  }
+  > button:last-child {
+    right: 0;
+    top: 50%;
+  }
+`;
+
+const ModalImgBox = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+`;
+
+const ModalImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
 
 function ArticleProjectModal({ modalContent }) {
@@ -61,52 +99,48 @@ function ArticleProjectModal({ modalContent }) {
 
   return (
     <>
-      <div className='thumbnail'>
-        <ModalContent
-          src={modalContent.img[0]}
-          alt='Img'
-          onClick={() => {
-            setModalOpen(true);
-          }}
-        />
-      </div>
+      <ModalThumbNail
+        src={modalContent.img[0]}
+        onClick={() => {
+          setModalOpen(true);
+        }}
+      />
 
       <Modal isOpen={modalOpen} ariaHideApp={false} onRequestClose={() => setModalOpen(false)}>
-        <div className='project_01 div_project'>
-          <div className='project_carousel'>
-            <div className='project_imgbox' ref={moveImgRef} style={{ transform: "translateX", transition: "all 0.5s ease-in-out" }}>
-              {modalContent.img.map((data, i) => {
-                return <img src={data} alt='Img' key={i} />;
-              })}
-            </div>
-            <button className='leftBtn' onClick={onMoveLeft}>
-              <FontAwesomeIcon icon={faAngleLeft} className='faAngleLeft' />
-            </button>
-            <button className='rightBtn' onClick={onMoveRight}>
-              <FontAwesomeIcon icon={faAngleRight} className='faAngleRight' />
-            </button>
+        <ModalContainer>
+          <ModalImgBox ref={moveImgRef} style={{ transform: "translateX", transition: "all 0.5s ease-in-out" }}>
+            {modalContent.img.map((data, i) => {
+              return <ModalImg src={data} key={i} />;
+            })}
+          </ModalImgBox>
+          <button className='leftBtn' onClick={onMoveLeft}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </button>
+          <button className='rightBtn' onClick={onMoveRight}>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </button>
+        </ModalContainer>
+        <div className='project_text'>
+          <h3>
+            <FontAwesomeIcon icon={faFileCode} />
+            {modalContent.title}
+          </h3>
+          <div className='stack_container'>
+            {modalContent.stack.map((stack) => {
+              return <div className='stack'>{stack}</div>;
+            })}
           </div>
-          <div className='project_text'>
-            <h3>
-              <FontAwesomeIcon icon={faFileCode} className='faFileCode icon' />
-              {modalContent.title}
-            </h3>
-            <div className='stack_container'>
-              {modalContent.stack.map((stack) => {
-                return <div className='stack'>{stack}</div>;
-              })}
-            </div>
-            <p>
-              <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              {modalContent.content}
-            </p>
+          <p>
+            <FontAwesomeIcon icon={faCheck} />
+            {modalContent.content}
+          </p>
 
-            <p>
-              <FontAwesomeIcon icon={faCheck} className='faCheck icon' />
-              {modalContent.date}
-            </p>
-          </div>
+          <p>
+            <FontAwesomeIcon icon={faCheck} />
+            {modalContent.date}
+          </p>
         </div>
+
         <div className='btn_part'>
           <button
             onClick={() => {
