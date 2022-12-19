@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   width: 20%;
+
   margin-top: 3%;
 
   > img:first-child {

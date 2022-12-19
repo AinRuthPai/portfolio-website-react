@@ -6,8 +6,8 @@ import styled from "styled-components";
 
 const ModalThumbNail = styled.img`
   width: 100%;
-  object-fit: cover;
-  object-position: top;
+  height: 100%;
+  object-fit: contain;
   overflow: hidden;
   transition: transform 0.1s ease-in-out;
   border-radius: 20px;
@@ -29,7 +29,7 @@ const ModalContainer = styled.div`
   > button {
     position: absolute;
     z-index: 99;
-    font-size: 30px;
+    font-size: 50px;
     cursor: pointer;
     border: none;
     outline: none;
@@ -53,7 +53,6 @@ const ModalImgBox = styled.div`
 
 const ModalImg = styled.img`
   width: 100%;
-  height: 100%;
   object-fit: contain;
 `;
 
