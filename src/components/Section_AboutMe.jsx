@@ -12,7 +12,6 @@ const SectionAbout = styled(Section)`
 `;
 
 const MyImg = styled.img`
-  border: 1px solid black;
   width: 25%;
   height: 40%;
   margin-top: 5%;
@@ -24,10 +23,10 @@ function SectionAboutMe() {
   return (
     <SectionAbout>
       <h1>About me</h1>
-      <MyImg />
+      <MyImg src={process.env.PUBLIC_URL + "/img/myimg.jpg"} alt='myimg' />
       <p>
         <FontAwesomeIcon icon={faPerson} />
-        백훈찬
+        이름 : 백훈찬
       </p>
 
       <p>

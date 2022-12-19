@@ -57,6 +57,20 @@ const ModalImg = styled.img`
   object-fit: contain;
 `;
 
+const Btn = styled.button`
+  background-color: #3d3d3d;
+  color: white;
+  font-size: 16px;
+  padding: 10px 14px;
+  margin: 0 14px;
+  border: none;
+  cursor: pointer;
+`;
+
+const ProjectText = styled.div`
+  text-align: center;
+`;
+
 function ArticleProjectModal({ modalContent }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentPos, setCurrentPos] = useState(0);
@@ -120,7 +134,7 @@ function ArticleProjectModal({ modalContent }) {
             <FontAwesomeIcon icon={faAngleRight} />
           </button>
         </ModalContainer>
-        <div className='project_text'>
+        <ProjectText>
           <h3>
             <FontAwesomeIcon icon={faFileCode} />
             {modalContent.title}
@@ -139,19 +153,18 @@ function ArticleProjectModal({ modalContent }) {
             <FontAwesomeIcon icon={faCheck} />
             {modalContent.date}
           </p>
-        </div>
-
-        <div className='btn_part'>
-          <button
-            onClick={() => {
-              setModalOpen(false);
-            }}>
-            Close
-          </button>
-          <a href={modalContent.link} target='_blank' rel='noopener noreferrer'>
-            <button className='btn_link'>Go to Giuhub</button>
-          </a>
-        </div>
+          <div className='btn_part'>
+            <Btn
+              onClick={() => {
+                setModalOpen(false);
+              }}>
+              Close
+            </Btn>
+            <a href={modalContent.link} target='_blank' rel='noopener noreferrer'>
+              <Btn className='btn_link'>Giuhub</Btn>
+            </a>
+          </div>
+        </ProjectText>
       </Modal>
     </>
   );

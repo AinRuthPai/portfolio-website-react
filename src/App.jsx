@@ -8,7 +8,7 @@ import styled from "styled-components";
 const AllContents = styled.div`
   display: flex;
   width: 90%;
-  margin: 3% auto;
+  margin: 2% auto;
   font-family: "Pretendard-Regular";
 
   @font-face {
@@ -30,9 +30,9 @@ function App() {
         <SectionNav />
         <MainContents>
           <Routes>
-            <Route path='/' element={<SectionProject />} />
-            <Route path='/skills' element={<SectionSkills />} />
-            <Route path='/aboutme' element={<SectionAboutMe />} />
+            <Route path='/portfolio-website-react' element={<SectionProject />} />
+            <Route path='/portfolio-website-react/skills' element={<SectionSkills />} />
+            <Route path='/portfolio-website-react/aboutme' element={<SectionAboutMe />} />
           </Routes>
         </MainContents>
       </AllContents>

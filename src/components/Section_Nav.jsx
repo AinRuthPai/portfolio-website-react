@@ -6,7 +6,6 @@ const Nav = styled.nav`
   margin-top: 3%;
 
   > img:first-child {
-    border: 1px solid black;
     width: 70%;
     object-fit: contain;
   }
@@ -40,17 +39,17 @@ const LinkStyle = styled(Link)`
 function SectionNav() {
   return (
     <Nav>
-      <img src={process.env.PUBLIC_URL + "/img/4.png"} alt='myimg' />
+      <img src={process.env.PUBLIC_URL + "/img/myimg.jpg"} alt='myimg' />
       <p>Baek HoonChan</p>
       <div>
         <p>
-          <LinkStyle to='/'>Project</LinkStyle>
+          <LinkStyle to='/portfolio-website-react'>Project</LinkStyle>
         </p>
         <p>
-          <LinkStyle to='/skills'>Skills</LinkStyle>
+          <LinkStyle to='/portfolio-website-react/skills'>Skills</LinkStyle>
         </p>
         <p>
-          <LinkStyle to='/aboutme'>About me</LinkStyle>
+          <LinkStyle to='/portfolio-website-react/aboutme'>About me</LinkStyle>
         </p>
       </div>
       <div>
