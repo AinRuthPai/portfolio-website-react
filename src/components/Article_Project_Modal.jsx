@@ -11,13 +11,14 @@ const ModalThumbNail = styled.img`
   overflow: hidden;
   transition: transform 0.1s ease-in-out;
   border-radius: 20px;
+  box-shadow: 4px 4px 4px 4px #e2e2e2;
 
   :hover {
     cursor: pointer;
     transform: scale(1.01);
-    box-shadow: 4px 4px 4px 4px #e2e2e2;
   }
 `;
+
 const ModalContainer = styled.div`
   width: 80%;
   height: 100%;
@@ -34,6 +35,14 @@ const ModalContainer = styled.div`
     border: none;
     outline: none;
     background: none;
+    transition: transform 0.1s ease-in;
+    color: gray;
+
+    :hover {
+      color: black;
+      cursor: pointer;
+      transform: scale(1.05);
+    }
   }
   > button:nth-child(2) {
     left: 0;
@@ -56,18 +65,31 @@ const ModalImg = styled.img`
   object-fit: contain;
 `;
 
-const Btn = styled.button`
-  background-color: #3d3d3d;
-  color: white;
-  font-size: 16px;
-  padding: 10px 14px;
-  margin: 0 14px;
-  border: none;
-  cursor: pointer;
-`;
-
 const ProjectText = styled.div`
   text-align: center;
+  font-family: "Pretendard-Regular";
+
+  button {
+    background-color: #3d3d3d;
+    color: white;
+    font-size: 16px;
+    padding: 10px 14px;
+    margin: 0 14px;
+    border: none;
+    cursor: pointer;
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+
+    > div {
+      margin: 6px 10px;
+      background-color: #d8d9de;
+      border-radius: 6px;
+      padding: 4px 8px;
+    }
+  }
 `;
 
 function ArticleProjectModal({ modalContent }) {
@@ -126,10 +148,10 @@ function ArticleProjectModal({ modalContent }) {
               return <ModalImg src={data} key={i} />;
             })}
           </ModalImgBox>
-          <button className='leftBtn' onClick={onMoveLeft}>
+          <button onClick={onMoveLeft}>
             <FontAwesomeIcon icon={faAngleLeft} />
           </button>
-          <button className='rightBtn' onClick={onMoveRight}>
+          <button onClick={onMoveRight}>
             <FontAwesomeIcon icon={faAngleRight} />
           </button>
         </ModalContainer>
@@ -138,9 +160,9 @@ function ArticleProjectModal({ modalContent }) {
             <FontAwesomeIcon icon={faFileCode} />
             {modalContent.title}
           </h3>
-          <div className='stack_container'>
+          <div>
             {modalContent.stack.map((stack) => {
-              return <div className='stack'>{stack}</div>;
+              return <div>{stack}</div>;
             })}
           </div>
           <p>
@@ -152,15 +174,15 @@ function ArticleProjectModal({ modalContent }) {
             <FontAwesomeIcon icon={faCheck} />
             {modalContent.date}
           </p>
-          <div className='btn_part'>
-            <Btn
+          <div>
+            <button
               onClick={() => {
                 setModalOpen(false);
               }}>
               Close
-            </Btn>
+            </button>
             <a href={modalContent.link} target='_blank' rel='noopener noreferrer'>
-              <Btn className='btn_link'>Giuhub</Btn>
+              <button className='btn_link'>Giuhub</button>
             </a>
           </div>
         </ProjectText>

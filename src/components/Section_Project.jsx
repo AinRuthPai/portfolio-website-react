@@ -5,9 +5,9 @@ import styled from "styled-components";
 const GridModal = styled.div`
   margin-left: 50px;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-row-gap: 5%;
-  grid-column-gap: 5%;
+  grid-template-columns: repeat(2, 35%);
+  grid-row-gap: 10%;
+  grid-column-gap: 10%;
   justify-content: center;
   align-items: center;
 `;

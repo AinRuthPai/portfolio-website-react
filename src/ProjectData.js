@@ -3,10 +3,10 @@ const publicUrl = process.env.PUBLIC_URL;
 const projectData = [
   {
     id: 0,
-    title: "BETWEEN / To do List, CRUD게시판, 날씨 앱",
+    title: "BETWEEN / To do List, 게시판, 날씨 앱",
     stack: ["React.JS", "React Hooks", "Styled-components", "JSON-Server"],
     content: `
-    JSON-Server를 이용한 To Do List와 CRUD 게시판 / Open API를 이용한 날씨 앱 / Firebase 인증 시스템을 이용한 구글 로그인
+    JSON-Server를 이용한 To Do List와 CRUD 게시판 / Open API를 이용한 날씨 앱
     `,
     date: "1인 개발 / 22년 5월 제작",
     img: [
@@ -22,7 +22,7 @@ const projectData = [
     id: 1,
     title: "포트폴리오 웹사이트",
     stack: ["React.JS", "React Hooks", "Styled-components"],
-    content: "react-modal, react-typist 라이브러리를 사용하여 제작한 포트폴리오 웹사이트.",
+    content: "포트폴리오 웹사이트.",
     date: "1인 개발 / 22년 2월 제작",
     img: [
       publicUrl + "/img/portfolio/portfolio1.png",
@@ -35,7 +35,7 @@ const projectData = [
     id: 2,
     title: "ShoeShop / 신발 쇼핑몰",
     stack: ["React.JS", "React Hooks", "React-Redux", "Styled-components"],
-    content: "장바구니 기능과 axios 요청으로 데이터 불러오기를 구현한 사이트입니다.",
+    content: "신발 쇼핑몰 사이트입니다",
     date: "1인 개발 / 22년 1월 제작",
     img: [
       publicUrl + "/img/shoeshop/shoeshop1.png",
