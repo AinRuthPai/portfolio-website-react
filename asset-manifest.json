@@ -1,14 +1,10 @@
 {
   "files": {
-    "main.css": "/portfolio-website-react/static/css/main.a72dfa12.css",
-    "main.js": "/portfolio-website-react/static/js/main.f6e639cd.js",
-    "static/media/Cafe24SsurroundAir.ttf": "/portfolio-website-react/static/media/Cafe24SsurroundAir.2477297bc14b8b2ed082.ttf",
+    "main.js": "/portfolio-website-react/static/js/main.d9bbc968.js",
     "index.html": "/portfolio-website-react/index.html",
-    "main.a72dfa12.css.map": "/portfolio-website-react/static/css/main.a72dfa12.css.map",
-    "main.f6e639cd.js.map": "/portfolio-website-react/static/js/main.f6e639cd.js.map"
+    "main.d9bbc968.js.map": "/portfolio-website-react/static/js/main.d9bbc968.js.map"
   },
   "entrypoints": [
-    "static/css/main.a72dfa12.css",
-    "static/js/main.f6e639cd.js"
+    "static/js/main.d9bbc968.js"
   ]
 }
