@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faEnvelope, faPerson, faFileCode, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Section } from "./Section_Skills";
 import styled from "styled-components";
+import React from "react";
 
 const SectionAbout = styled(Section)`
   flex-direction: column;

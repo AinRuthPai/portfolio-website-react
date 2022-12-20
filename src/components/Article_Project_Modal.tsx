@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCode, faCheck, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
 import styled from "styled-components";
+import React from "react";
 
 const ModalThumbNail = styled.img`
   width: 100%;
@@ -20,7 +21,7 @@ const ModalThumbNail = styled.img`
 `;
 
 const ModalContainer = styled.div`
-  width: 80%;
+  width: 70%;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -92,10 +93,10 @@ const ProjectText = styled.div`
   }
 `;
 
-function ArticleProjectModal({ modalContent }) {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentPos, setCurrentPos] = useState(0);
-  let moveImgRef = useRef();
+function ArticleProjectModal({ modalContent }: any) {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [currentPos, setCurrentPos] = useState<number>(0);
+  let moveImgRef = useRef<any>();
 
   useEffect(() => {
     if (modalOpen === false) {
@@ -104,7 +105,7 @@ function ArticleProjectModal({ modalContent }) {
   }, [modalOpen]);
 
   useEffect(() => {
-    const { current } = moveImgRef;
+    const { current }: any = moveImgRef;
     if (current) {
       if (currentPos + 1) {
         current.style.transform = `translateX(-${currentPos}00%)`;
@@ -144,7 +145,7 @@ function ArticleProjectModal({ modalContent }) {
       <Modal isOpen={modalOpen} ariaHideApp={false} onRequestClose={() => setModalOpen(false)}>
         <ModalContainer>
           <ModalImgBox ref={moveImgRef} style={{ transform: "translateX", transition: "all 0.5s ease-in-out" }}>
-            {modalContent.img.map((data, i) => {
+            {modalContent.img.map((data: string, i: number) => {
               return <ModalImg src={data} key={i} />;
             })}
           </ModalImgBox>
@@ -161,8 +162,8 @@ function ArticleProjectModal({ modalContent }) {
             {modalContent.title}
           </h3>
           <div>
-            {modalContent.stack.map((stack) => {
-              return <div>{stack}</div>;
+            {modalContent.stack.map((stack: string, i: number) => {
+              return <div key={i}>{stack}</div>;
             })}
           </div>
           <p>

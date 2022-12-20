@@ -21,7 +21,7 @@ const projectData = [
   {
     id: 1,
     title: "포트폴리오 웹사이트",
-    stack: ["React.JS", "React Hooks", "Styled-components"],
+    stack: ["React.JS", "React Hooks", "Styled-components", "TypeScript"],
     content: "포트폴리오 웹사이트.",
     date: "1인 개발 / 22년 2월 제작",
     img: [

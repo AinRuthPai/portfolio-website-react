@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
+import React from "react";
 
 const SkillsImg = styled.img`
   width: 100px;

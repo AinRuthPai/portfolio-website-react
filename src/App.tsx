@@ -4,6 +4,7 @@ import SectionSkills from "./components/Section_Skills";
 import SectionAboutMe from "./components/Section_AboutMe";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
+import React from "react";
 
 const AllContents = styled.div`
   display: flex;
