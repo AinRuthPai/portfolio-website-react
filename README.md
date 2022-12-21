@@ -2,12 +2,18 @@
 
 ## 📌 서비스 링크
 
-- [링크](https://ainruthpai.github.io/portfolio-website-react)
+- [서비스 링크](https://ainruthpai.github.io/portfolio-website-react)
 
 ## 📌 화면
 
 ![main](/public/img/portfolio/portfolio1.png)
+
+---
+
 ![main](/public/img/portfolio/portfolio2.png)
+
+---
+
 ![main](/public/img/portfolio/portfolio3.png)
 
 ## 📌 버전 정보
