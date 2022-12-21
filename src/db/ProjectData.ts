@@ -34,7 +34,7 @@ const projectData = [
   {
     id: 2,
     title: "ShoeShop / 신발 쇼핑몰",
-    stack: ["React.JS", "React Hooks", "React-Redux", "Styled-components"],
+    stack: ["React.JS", "React Hooks", "React-Redux", "Styled-components", "TypeScript"],
     content: "신발 쇼핑몰 사이트입니다",
     date: "1인 개발 / 22년 1월 제작",
     img: [
