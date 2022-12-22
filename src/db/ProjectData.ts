@@ -3,6 +3,20 @@ const publicUrl = process.env.PUBLIC_URL;
 const projectData = [
   {
     id: 0,
+    title: "ShoeShop / 신발 쇼핑몰",
+    stack: ["React.JS", "React Hooks", "React-Redux", "Styled-components", "TypeScript"],
+    content: "신발 쇼핑몰 사이트입니다",
+    date: "1인 개발 / 22년 1월 제작",
+    img: [
+      publicUrl + "/img/shoeshop/shoeshop1.png",
+      publicUrl + "/img/shoeshop/shoeshop2.png",
+      publicUrl + "/img/shoeshop/shoeshop3.png",
+      publicUrl + "/img/shoeshop/shoeshop4.png",
+    ],
+    link: "https://github.com/AinRuthPai/react-shoeshop",
+  },
+  {
+    id: 1,
     title: "BETWEEN / To do List, 게시판, 날씨 앱",
     stack: ["React.JS", "React Hooks", "Styled-components", "JSON-Server"],
     content: `
@@ -19,7 +33,7 @@ const projectData = [
     link: "https://github.com/AinRuthPai/react-todolist",
   },
   {
-    id: 1,
+    id: 2,
     title: "포트폴리오 웹사이트",
     stack: ["React.JS", "React Hooks", "Styled-components", "TypeScript"],
     content: "포트폴리오 웹사이트.",
@@ -30,20 +44,6 @@ const projectData = [
       publicUrl + "/img/portfolio/portfolio3.png",
     ],
     link: "https://github.com/AinRuthPai/portfolio-website-react",
-  },
-  {
-    id: 2,
-    title: "ShoeShop / 신발 쇼핑몰",
-    stack: ["React.JS", "React Hooks", "React-Redux", "Styled-components", "TypeScript"],
-    content: "신발 쇼핑몰 사이트입니다",
-    date: "1인 개발 / 22년 1월 제작",
-    img: [
-      publicUrl + "/img/shoeshop/shoeshop1.png",
-      publicUrl + "/img/shoeshop/shoeshop2.png",
-      publicUrl + "/img/shoeshop/shoeshop3.png",
-      publicUrl + "/img/shoeshop/shoeshop4.png",
-    ],
-    link: "https://github.com/AinRuthPai/react-shoeshop",
   },
   {
     id: 3,

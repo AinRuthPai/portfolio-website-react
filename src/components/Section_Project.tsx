@@ -14,6 +14,16 @@ const GridModal = styled.div`
   align-items: center;
 `;
 
+export interface Data {
+  id: number;
+  title: string;
+  stack: Array<string>;
+  content: string;
+  date: string;
+  img: Array<string>;
+  link: string;
+}
+
 function SectionProject() {
   const project = projectData;
 
@@ -21,7 +31,7 @@ function SectionProject() {
     <>
       <h1>Project</h1>
       <GridModal>
-        {project.map((modalContent: any) => {
+        {project.map((modalContent: Data) => {
           return <ArticleProjectModal modalContent={modalContent} key={modalContent.id} />;
         })}
       </GridModal>

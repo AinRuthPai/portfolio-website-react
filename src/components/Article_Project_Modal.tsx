@@ -4,6 +4,7 @@ import { faFileCode, faCheck, faAngleLeft, faAngleRight } from "@fortawesome/fre
 import Modal from "react-modal";
 import styled from "styled-components";
 import React from "react";
+import { Data } from "./Section_Project";
 
 const ModalThumbNail = styled.img`
   width: 100%;
@@ -93,7 +94,7 @@ const ProjectText = styled.div`
   }
 `;
 
-function ArticleProjectModal({ modalContent }: any) {
+function ArticleProjectModal({ modalContent }: { modalContent: Data }) {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [currentPos, setCurrentPos] = useState<number>(0);
   let moveImgRef = useRef<any>();
@@ -105,7 +106,7 @@ function ArticleProjectModal({ modalContent }: any) {
   }, [modalOpen]);
 
   useEffect(() => {
-    const { current }: any = moveImgRef;
+    const { current }: { current: any } = moveImgRef;
     if (current) {
       if (currentPos + 1) {
         current.style.transform = `translateX(-${currentPos}00%)`;
@@ -144,7 +145,7 @@ function ArticleProjectModal({ modalContent }: any) {
 
       <Modal isOpen={modalOpen} ariaHideApp={false} onRequestClose={() => setModalOpen(false)}>
         <ModalContainer>
-          <ModalImgBox ref={moveImgRef} style={{ transform: "translateX", transition: "all 0.5s ease-in-out" }}>
+          <ModalImgBox ref={moveImgRef}>
             {modalContent.img.map((data: string, i: number) => {
               return <ModalImg src={data} key={i} />;
             })}

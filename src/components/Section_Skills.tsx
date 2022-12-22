@@ -48,7 +48,7 @@ function SectionSkills() {
           <div>
             <SkillsImg src={process.env.PUBLIC_URL + "/img/react.png"} className='skills_logo' alt='react' />
             <SkillsImg src={process.env.PUBLIC_URL + "/img/redux.png"} className='skills_logo' alt='redux' />
-            <SkillsImg src={process.env.PUBLIC_URL + "/img/nodejs.png"} className='skills_logo' alt='nodejs' />
+            <SkillsImg src={process.env.PUBLIC_URL + "/img/typescript.png"} className='skills_logo' alt='typescript' />
           </div>
         </div>
         <SkillsText>

@@ -19,43 +19,6 @@ const AllContents = styled.div`
     font-weight: 400;
     font-style: normal;
   }
-
-  /* > .ReactModal__Body--open,
-  .ReactModal__Html--open {
-    overflow: hidden;
-  }
-
-  > .ReactModal__Overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    z-index: 99;
-    overflow: auto;
-  }
-
-  > .ReactModal__Content {
-    font-family: "Pretendard-Regular";
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    box-shadow: 4px 4px 6px 4px #dadce0;
-  }
-
-  > .ReactModal__Overlay--after-open {
-    opacity: 1;
-  }
-
-  > .ReactModal__Overlay--before-close {
-    opacity: 0;
-  } */
 `;
 
 const MainContents = styled.div`
