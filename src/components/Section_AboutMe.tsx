@@ -1,26 +1,9 @@
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faEnvelope, faPerson, faFileCode, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Section } from "./Section_Skills";
-import styled from "styled-components";
-import React from "react";
 
-const SectionAbout = styled(Section)`
-  flex-direction: column;
-
-  > p {
-    font-size: 18px;
-  }
-`;
-
-const MyImg = styled.img`
-  width: 25%;
-  height: 40%;
-  margin-top: 5%;
-  margin-bottom: 3%;
-  object-fit: contain;
-`;
-
-function SectionAboutMe() {
+export default function SectionAboutMe() {
   return (
     <SectionAbout>
       <h1>About me</h1>
@@ -59,4 +42,18 @@ function SectionAboutMe() {
   );
 }
 
-export default SectionAboutMe;
+const SectionAbout = styled(Section)`
+  flex-direction: column;
+
+  > p {
+    font-size: 18px;
+  }
+`;
+
+const MyImg = styled.img`
+  width: 25%;
+  height: 40%;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  object-fit: contain;
+`;

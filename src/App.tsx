@@ -1,10 +1,26 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
 import SectionProject from "./components/Section_Project";
 import SectionNav from "./components/Section_Nav";
 import SectionSkills from "./components/Section_Skills";
 import SectionAboutMe from "./components/Section_AboutMe";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import styled from "styled-components";
-import React from "react";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AllContents>
+        <SectionNav />
+        <MainContents>
+          <Routes>
+            <Route path='/portfolio-website-react' element={<SectionProject />} />
+            <Route path='/portfolio-website-react/skills' element={<SectionSkills />} />
+            <Route path='/portfolio-website-react/aboutme' element={<SectionAboutMe />} />
+          </Routes>
+        </MainContents>
+      </AllContents>
+    </BrowserRouter>
+  );
+}
 
 const AllContents = styled.div`
   display: flex;
@@ -25,22 +41,3 @@ const MainContents = styled.div`
   width: 80%;
   height: 100%;
 `;
-
-function App() {
-  return (
-    <BrowserRouter>
-      <AllContents>
-        <SectionNav />
-        <MainContents>
-          <Routes>
-            <Route path='/portfolio-website-react' element={<SectionProject />} />
-            <Route path='/portfolio-website-react/skills' element={<SectionSkills />} />
-            <Route path='/portfolio-website-react/aboutme' element={<SectionAboutMe />} />
-          </Routes>
-        </MainContents>
-      </AllContents>
-    </BrowserRouter>
-  );
-}
-
-export default App;

@@ -1,40 +1,8 @@
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
-import React from "react";
 
-const SkillsImg = styled.img`
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin: 10px;
-`;
-
-export const Section = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  > h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-`;
-
-const SkillsText = styled.div`
-  font-size: 20px;
-  margin-left: 40px;
-
-  > p {
-    line-height: 150%;
-  }
-`;
-
-function SectionSkills() {
+export default function SectionSkills() {
   return (
     <>
       <Section>
@@ -74,4 +42,33 @@ function SectionSkills() {
   );
 }
 
-export default SectionSkills;
+const SkillsImg = styled.img`
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  object-fit: contain;
+`;
+
+export const Section = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  > h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+`;
+
+const SkillsText = styled.div`
+  margin-left: 40px;
+  font-size: 20px;
+
+  > p {
+    line-height: 150%;
+  }
+`;
